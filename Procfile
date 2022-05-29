@@ -1,1 +1,1 @@
-web: gunicorn juicy-recipes.wsgi
+web: gunicorn juicyrecipes.wsgi:application
