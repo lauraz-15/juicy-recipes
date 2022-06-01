@@ -15,14 +15,13 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <a class="logo" href="{% url 'home' %}">
              <img src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851476/logo_2_huaay0.png">
@@ -55,7 +54,12 @@
             </div>
         </div>
     </nav>
-<img src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png">
+    <div class="hero-image">
+        <h2>
+            This is some text to test how it would look like on the website.
+        </h2>
+    </div>
+<!-- <img src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png"> -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* ----- NAV BAR ------ */
+
+#main-nav {
+    background-color: red;
+}
+
+
+/* ----- HERO LANDING PAGE ------ */
+
+.hero-image {
+    min-height: 800px;
+    background:url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png) rgba(40, 40, 40, 0.5);
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+
+  h2 {
+      color: #fff;
+      font-size: 5rem;
+      font-family: 'Abril Fatface';
+      text-align: center;
+      margin: 140px;
+      margin-top: 240px;
+  }
+
