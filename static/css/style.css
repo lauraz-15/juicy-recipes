@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 /* ----- NAV BAR ------ */
 
@@ -17,12 +18,42 @@
   }
 
   h1 {
-      color: #fff;
-      font-size: 5rem;
+      color: #fffadc;
+      font-size: 8rem;
       font-family: 'Abril Fatface';
       text-align: center;
-      margin: 140px;
-      margin-top: 240px;
+      margin: 210px 200px 0 200px;
+      font-weight: normal;
+      line-height: 0.8;
+
+  }
+
+  .then {
+      font-size: 4rem;
+      font-weight: 400;
+  }
+
+  .second-line {
+      text-transform: uppercase;
+      font-family: 'Nanum Gothic', sans-serif;
+      color: #fffadc;
+      font-size: 5rem;
+      letter-spacing: 3px;
+  }
+
+  .third {
+      font-weight: bold;
+      border-bottom: 5px solid;
+      padding-bottom: 10px;
+      letter-spacing: 6px;
+  }
+
+  .author {
+      text-align: right;
+      margin-right: 50px;
+      color: #fff;
+      font-family: 'Nanum Gothic', sans-serif;
+      color: #fffadc;
   }
 
 /* ----- RECIPE CARDS ------ */
