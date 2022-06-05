@@ -14,17 +14,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/regular.min.css">
+    <link rel="stylesheet" href="~/lib/Font-Awesome/css/solid.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-
-    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white">
+      <nav id="main-nav" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="logo" href="{% url 'home' %}">
-             <img src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851476/logo_2_huaay0.png">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1654371284/Juicy_Recipes_500_200px_500_100px_450_100px_350_100px_250_100px_aahtq0.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,24 +35,35 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">My Favorites</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Search</a>
+                    </li>
+
+                    </ul>
+
+                    <ul id="login-bar" class="navbar-nav me-auto mb-2 mb-lg-0 nav navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    First, we eat.
-                </span>
+           
             </div>
         </div>
     </nav>
@@ -70,7 +83,7 @@
 
     <div class="hero-image">
         <h1>
-            "First we eat,
+            "First we eat, <i class="fa-solid fa-burger"></i>
        <br><span class="second-line"><span class="then">Then we do</span><br><span class="third"> everything else."</span></span> </h1>
         <h3 class="author">M.F.K.Fisher</h3>
     </div>
