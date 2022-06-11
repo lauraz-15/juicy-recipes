@@ -89,7 +89,24 @@
             alert.close();
         }, 2500);
 
-        console.log("This is really working and i am Javascript genius!")
+
+        let searchBtn = document.getElementById('search-btn')
+
+        searchBtn.addEventListener("click", ()=> {
+            console.log("Button got clicked")
+            sendAPIcall();
+        })
+
+    async function sendAPIcall() {
+        let APP_ID = "2f1133a1"
+        let API_KEY = "63872c307c1ea5bea9706e007963df6f"
+        let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=pizza`);
+        console.log(response)
+        let searchData = await response.json()
+        console.log(searchData);
+    }
+
+
     </script>
 </body>
 

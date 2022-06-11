@@ -215,3 +215,12 @@ textarea {
     color: #fffadc;
     background-color: #439A86;
 }
+
+
+/* ----- SEARCH ------ */
+
+
+#search {
+    width: 50%;
+    margin: 10% auto;
+}
