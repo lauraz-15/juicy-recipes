@@ -41,7 +41,7 @@
       font-size: 8rem;
       font-family: 'Abril Fatface';
       text-align: center;
-      margin: 210px 200px 0 200px;
+      padding: 130px;
       font-weight: normal;
       line-height: 0.8;
 
@@ -133,4 +133,37 @@ footer {
 footer > p {
     color: #F47A00;
     margin: 30px;
+}
+
+
+/* ----- RECIPE DETAIL ------ */
+
+
+#detail-image, #ingridients {
+    padding-top: 3%;
+}
+
+#ingridients {
+    padding-left: 3%;
+
+}
+.title-text {
+    padding-bottom: 1%;
+    
+    border-bottom: 3px solid yellow;
+    letter-spacing: .075rem;    
+}
+
+.title-block {
+    text-align: center;
+    padding-top: 6%;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#ingridients-list {
+    font-weight: 600 !important;
 }
