@@ -138,6 +138,9 @@ footer > p {
 
 /* ----- RECIPE DETAIL ------ */
 
+#detail-content {
+    padding: 0 8%;
+}
 
 #detail-image, #ingridients {
     padding-top: 3%;
@@ -166,4 +169,9 @@ h3 {
 
 #ingridients-list {
     font-weight: 600 !important;
+}
+
+.directions {
+    text-align: center;
+    padding-top: 3%;
 }

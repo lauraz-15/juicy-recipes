@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 <div class="masthead">
-    <div class="container">
+    <div class="container" id="detail-content">
         <h2 class="title-block">
             <span class="title-text">{{ recipe.title }}</span>
         </h2>
@@ -17,10 +17,12 @@
             <div class="col-md-6 masthead-text" id="ingridients">
                 <p class="card-bottom">{{ recipe.author }} | {{ recipe.created_on }} </p>
                 <h3>Ingridents:</h3>
-                <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
+                <p class="card-text">{{ recipe.ingridients | safe }}</p>
             </div>
-        
+           
         </div>
+        <h3 class="directions">Directions:</h3>
+        <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
     </div>
 </div>
 
