@@ -95,6 +95,8 @@
         searchBtn.addEventListener("click", ()=> {
             console.log("Button got clicked")
             sendAPIcall();
+            dipsplayResults(searchData)
+           
         })
 
     async function sendAPIcall() {
@@ -104,9 +106,12 @@
         console.log(response)
         let searchData = await response.json()
         console.log(searchData);
+        console.log(`${searchData.hits[0].recipe.label}`)
     }
 
-
+    function dipsplayResults(searchData) {
+        document.querySelector('#search-results').innerHTML = `${searchData.hits[0].recipe.label}`
+    }
     </script>
 </body>
 
