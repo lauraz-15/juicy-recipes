@@ -65,29 +65,10 @@
             <hr>
         </div>
     </div> -->
-    <div id="comments-section">
+    <div class="container" id="comments-section">
         <div class="row">
-              <!-- Leave a comment: -->
-            <div class="d-none d-md-block col-md-6">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                {% if user.is_authenticated %}
-
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
-            </div>
-         <!-- Existing comments-->
-        <div class="d-none d-md-block col-md-6">
+                  <!-- Existing comments-->
+        <div class="d-md-block col-md-6">
             <h3>Comments:</h3>
             <div>
                 {% for comment in comments %}
@@ -103,6 +84,25 @@
                 {% endfor %}
             </div>
         </div>
+              <!-- Leave a comment: -->
+            <div class="d-md-block col-md-6" id="">
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+                {% if user.is_authenticated %}
+
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
      
     </div>
 </div>

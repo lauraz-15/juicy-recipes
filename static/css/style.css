@@ -198,10 +198,20 @@ h3 {
 
 #comments-section {
     display: inline-block;
-    border-top: 3px solid #439A86;
+    border-top: 3px solid yellow;
     padding: 3% 8%;
 }
 
-.comment-text {
-    height: 50px;
+textarea {
+    height: 60px;
+    width: 380px;
+}
+
+.btn-success {
+   background-color: #439A86;
+}
+
+.btn-success:hover {
+    color: #fffadc;
+    background-color: #439A86;
 }

@@ -12,6 +12,13 @@ class RecipeList(generic.ListView):
     paginate_by = 6
 
 
+class Search(generic.ListView):
+    model = Recipe
+    queryset = Recipe.objects.filter(status=1).order_by("-created_on")
+    template_name = "search.html"
+    paginate_by = 6
+
+
 class RecipeDetail(View):
 
 
