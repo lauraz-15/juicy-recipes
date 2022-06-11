@@ -182,12 +182,26 @@ h3 {
     padding-top: 3%;;
 }
 
-#ingridients-list {
+/* #ingridients-list {
     font-weight: 600 !important;
-}
+} */
 
 .directions {
     text-align: center;
     padding-top: 3%;
     display: inline-block;
+}
+
+
+/* ----- COMMENTS SECTION ------ */
+
+
+#comments-section {
+    display: inline-block;
+    border-top: 3px solid #439A86;
+    padding: 3% 8%;
+}
+
+.comment-text {
+    height: 50px;
 }
