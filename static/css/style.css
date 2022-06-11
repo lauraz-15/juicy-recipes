@@ -120,3 +120,17 @@ a {
     max-height: 360px;
     margin: 13px;
 }
+
+
+/* ----- FOOTER ------ */
+
+
+footer {
+    background-color: #E4F5E7;
+    min-height: 250px;
+}
+
+footer > p {
+    color: #F47A00;
+    margin: 30px;
+}
