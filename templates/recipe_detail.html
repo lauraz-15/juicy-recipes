@@ -15,7 +15,39 @@
                 {% endif %}
             </div>
             <div class="col-md-6 masthead-text" id="ingridients">
-                <p class="card-bottom">{{ recipe.author }} | {{ recipe.created_on }} </p>
+                <p>{{ recipe.author }} | {{ recipe.created_on }} </p>
+               <div class="row">
+                <!-- Number of comments -->
+                <div>
+                    <span id="likes-comments">
+                        {% with comments.count as total_comments %}
+                        <strong><i class="far fa-comments"></i>
+                            {{ total_comments }}
+                        </strong>
+                        {% endwith %}
+                    </span>
+                  
+                    <!-- Likes button -->
+                    <strong>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'recipe_like' recipe.slug%}" METHOD="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="recipe_id" value="{{recipe.slug}}"><i class="fas fa-heart"></i></button>
+                            {% else %}
+                            <button type="submit" name="recipe_id" value="{{recipe.slug}}"><i class="far fa-heart"></i></button>
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <span><i class="far fa-heart"></i></span>
+                        {% endif %}
+                        <span id="number-l">{{ recipe.number_of_likes }}</span>
+                    </strong>
+                </div>
+                <div>
+              
+                </div>
+            </div>
                 <h3>Ingridents:</h3>
                 <p class="card-text">{{ recipe.ingridients | safe }}</p>
             </div>
@@ -25,47 +57,9 @@
         <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
     </div>
 </div>
-
+<br>
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-              
-                <div class="row">
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug%}" METHOD="POST">
-                                {% csrf_token %}
-                                {% if liked %}
 
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
-
-                                {% else %}
-
-                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
-
-
-                                {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <span class="text-secondary">{{ post.number_of_likes }}</span>
-                        </strong>
-
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}
-                        </strong>
-                        {% endwith %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col">
             <hr>

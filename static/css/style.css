@@ -162,9 +162,24 @@ footer > p {
     padding-top: 6%;
 }
 
+#likes-comments {
+    color: #439A86;
+}
+
+.fa-heart, #number-l {
+    color: #FF1616;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    padding-left: 3%;
+}
+
 h3 {
     text-transform: uppercase;
     font-size: 20px;
+    padding-top: 3%;;
 }
 
 #ingridients-list {
@@ -174,4 +189,5 @@ h3 {
 .directions {
     text-align: center;
     padding-top: 3%;
+    display: inline-block;
 }
