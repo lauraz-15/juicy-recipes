@@ -82,6 +82,8 @@
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>
     </footer>
+
+
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
@@ -89,28 +91,61 @@
             alert.close();
         }, 2500);
 
+    // SEARCH AREA API 
 
         let searchBtn = document.getElementById('search-btn')
+      
 
         searchBtn.addEventListener("click", ()=> {
             console.log("Button got clicked")
             sendAPIcall();
             dipsplayResults(searchData)
+          
            
         })
 
     async function sendAPIcall() {
+
+        let searchvalue = document.getElementById('text-value').value
+
         let APP_ID = "2f1133a1"
         let API_KEY = "63872c307c1ea5bea9706e007963df6f"
-        let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=pizza`);
+        let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${searchvalue}`);
         console.log(response)
         let searchData = await response.json()
         console.log(searchData);
         console.log(`${searchData.hits[0].recipe.label}`)
+        dipsplayResults(searchData)
+        console.log(`Search value is: ${searchvalue}`)
+        console.log(searchData.hits)
     }
 
+
+
+
     function dipsplayResults(searchData) {
-        document.querySelector('#search-results').innerHTML = `${searchData.hits[0].recipe.label}`
+        searchData.hits.map(recipe=> {
+        var recipeCard = document.createElement('div');
+        recipeCard.classList.add('col-md-4')
+        recipeCard.innerHTML = 
+              `  
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <img class="card-image"
+                                src="${recipe.recipe.image}">
+                            </div>
+                            <h2 class="card-title">${recipe.recipe.label}</h2>
+                            <hr />
+                            <p class="card-bottom">Created by: author <i class="far fa-heart"></i>likes</p>
+                        </div>
+                    </div>
+                </div>
+    `
+  document.getElementsByClassName('search-results')[0].appendChild(recipeCard);
+})
+
+
     }
     </script>
 </body>
