@@ -128,7 +128,7 @@
         var recipeCard = document.createElement('div');
         recipeCard.classList.add('col-md-4')
         recipeCard.innerHTML = 
-              `  
+              `  <a href="${recipe.recipe.url}" target="_blank">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -137,10 +137,12 @@
                             </div>
                             <h2 class="card-title">${recipe.recipe.label}</h2>
                             <hr />
-                            <p class="card-bottom">Created by: author <i class="far fa-heart"></i>likes</p>
+                            <p class="card-bottom">Created by: ${recipe.recipe.source}     <span> Cal: ${recipe.recipe.calories.toFixed(0)}</span></p>
+
                         </div>
                     </div>
                 </div>
+                </a>
     `
   document.getElementsByClassName('search-results')[0].appendChild(recipeCard);
 })
