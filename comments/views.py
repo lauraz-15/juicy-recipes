@@ -5,6 +5,14 @@ from .models import Recipe
 from .forms import CommentForm
 
 
+def favorite_add(request):
+    new = Recipe.objects.filter(likes=request.user)
+    return render(
+        request,
+        'my_favorites.html',
+        {'new': new}
+    )
+
 class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by("-created_on")
@@ -24,12 +32,14 @@ class Categories(generic.ListView):
     template_name = "categories.html"
     paginate_by = 6
 
-class Favorites(generic.ListView):
-    model = Recipe
-    queryset = Recipe.objects.filter(status=1).order_by("-created_on")
-    template_name = "my_favorites.html"
-    paginate_by = 6
+# class Favorites(generic.ListView):
+#     model = Recipe
+#     queryset = Recipe.objects.filter(status=1).order_by("-created_on")
+#     template_name = "my_favorites.html"
+#     paginate_by = 6
+#     User = request.user,liked= user.liked.all()
 
+ 
 
 class RecipeDetail(View):
 
@@ -95,5 +105,3 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
-
-
