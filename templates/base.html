@@ -175,8 +175,8 @@ async function getHealthyCall() {
     console.log(searchHealthy.hits)
 }
 
-function dipsplayHealthyResults(searchHealthy) {
-        searchHealthy.hits.map(recipe=> {
+function dipsplayCategoryResults(searchCategory, categorie) {
+        searchCategory.hits.map(recipe=> {
         var recipeCard = document.createElement('div');
         recipeCard.classList.add('col-md-4')
         recipeCard.innerHTML = 
@@ -196,50 +196,60 @@ function dipsplayHealthyResults(searchHealthy) {
                 </div>
                 </a>
     `
-  document.getElementsByClassName('healthy-results')[0].appendChild(recipeCard);
+    // console.log("testy")
+    // console.log(searchCategory);
+    // if (searchCategory == "healthy") {
+    //     document.getElementsByClassName('healthy-results')[0].appendChild(recipeCard);
+    // } else if (searchCategory == "vegetarian") {
+    //     document.getElementsByClassName('vegetarian-results')[0].appendChild(recipeCard);
+    // } else  {
+    //     document.getElementsByClassName('deserts-results')[0].appendChild(recipeCard);
+    // }
+    document.getElementsByClassName(`${categorie}-results`)[0].appendChild(recipeCard);
+
 })
 }
 
 // VEGETARIAN
 
-async function getVegetarianCall() {
+// async function getVegetarianCall() {
     
-    let searchvalue = "vegetarian"
+//     let searchvalue = "vegetarian"
    
-    let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${searchvalue}`);
-    console.log(response)
-    let searchHealthy = await response.json()
-    console.log(searchHealthy);
-    console.log(`${searchHealthy.hits[0].recipe.label}`)
-    dipsplayHealthyResults(searchHealthy)
-    console.log(`Search value is: ${searchvalue}`)
-    console.log(searchHealthy.hits)
-}
+//     let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${searchvalue}`);
+//     console.log(response)
+//     let searchHealthy = await response.json()
+//     console.log(searchHealthy);
+//     console.log(`${searchHealthy.hits[0].recipe.label}`)
+//     dipsplayHealthyResults(searchHealthy)
+//     console.log(`Search value is: ${searchvalue}`)
+//     console.log(searchHealthy.hits)
+// }
 
-function dipsplayVegetarianResults(searchHealthy) {
-        searchHealthy.hits.map(recipe=> {
-        var recipeCard = document.createElement('div');
-        recipeCard.classList.add('col-md-4')
-        recipeCard.innerHTML = 
-              `  <a href="${recipe.recipe.url}" target="_blank">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                <img class="card-image"
-                                src="${recipe.recipe.image}">
-                            </div>
-                            <h2 class="card-title">${recipe.recipe.label}</h2>
-                            <hr />
-                            <p class="card-bottom">Created by: ${recipe.recipe.source}     <span> Cal: ${recipe.recipe.calories.toFixed(0)}</span></p>
+// function dipsplayVegetarianResults(searchHealthy) {
+//         searchHealthy.hits.map(recipe=> {
+//         var recipeCard = document.createElement('div');
+//         recipeCard.classList.add('col-md-4')
+//         recipeCard.innerHTML = 
+//               `  <a href="${recipe.recipe.url}" target="_blank">
+//                     <div class="card mb-4">
+//                         <div class="card-body">
+//                             <div class="image-container">
+//                                 <img class="card-image"
+//                                 src="${recipe.recipe.image}">
+//                             </div>
+//                             <h2 class="card-title">${recipe.recipe.label}</h2>
+//                             <hr />
+//                             <p class="card-bottom">Created by: ${recipe.recipe.source}     <span> Cal: ${recipe.recipe.calories.toFixed(0)}</span></p>
 
-                        </div>
-                    </div>
-                </div>
-                </a>
-    `
-  document.getElementsByClassName('vegetarian-results')[0].appendChild(recipeCard);
-})
-}
+//                         </div>
+//                     </div>
+//                 </div>
+//                 </a>
+//     `
+//   document.getElementsByClassName('vegetarian-results')[0].appendChild(recipeCard);
+// })
+// }
 
 window.onload = function() {
     getMultipleAPIcalls()
@@ -256,8 +266,8 @@ window.onload = function() {
 
 // MULTIPLE API CALLS FOR CATEGORIES:
 
-async function getMultipleAPIcalls() {
-    const categories = ["healthy", "vegetarian", "deserts"];
+async function getMultipleAPIcalls(recipeCard) {
+    const categories = ["healthy", "vegetarian", "deserts", "light", "grilled", "meat", "fish", "kids"];
     const responses = await Promise.all(
 	categories.map(async categorie => {
         let APP_ID = "2f1133a1"
@@ -269,7 +279,9 @@ async function getMultipleAPIcalls() {
         // console.log(response)
         let searchCategory = await response.json()
         console.log(searchCategory);
- 
+        dipsplayCategoryResults(searchCategory, categorie)
+        // console.log(searchCategory.hits)
+        
 	})
 );
 }
