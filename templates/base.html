@@ -33,7 +33,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'my_favorites' %}">My Favorites</a>
                     </li>
@@ -85,9 +85,6 @@
 
 
     <script>
-
-
-
         setTimeout(function () {
             let messages = document.getElementById('msg');
             let alert = new bootstrap.Alert(messages);
@@ -99,18 +96,10 @@
     function searchBtnClicked() {
     let searchBtn = document.getElementById('search-btn')
     searchBtn.addEventListener("click", ()=> {
-
-            sendAPIcall();
+            // sendAPIcall();
             dipsplayResults(searchData)
         })
 }
-
-
-
-
-
-
-
 
 async function sendAPIcall() {
 
@@ -127,9 +116,6 @@ async function sendAPIcall() {
         console.log(`Search value is: ${searchvalue}`)
         console.log(searchData.hits)
     }
-
-
-
 
     function dipsplayResults(searchData) {
         searchData.hits.map(recipe=> {
