@@ -24,6 +24,13 @@ class Categories(generic.ListView):
     template_name = "categories.html"
     paginate_by = 6
 
+class Favorites(generic.ListView):
+    model = Recipe
+    queryset = Recipe.objects.filter(status=1).order_by("-created_on")
+    template_name = "my_favorites.html"
+    paginate_by = 6
+
+
 class RecipeDetail(View):
 
 
@@ -88,3 +95,5 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
