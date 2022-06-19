@@ -6,37 +6,40 @@
 
 <h2>This is the page where you can view and edit your recipes</h2>
 <div class="container-fluid">
+    <h2 class="title-block">
+      <span class="title-text">My Recipes</span>
+  </h2>
     <div class="row">
         <!-- Recipes cards -->
         <div class="col-12 mt-3 left" id="card-container">
             <div class="row">
-                <!-- {% for recipe in recipe_list %} -->
+                {% for recipe in new %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <!-- {% if "placeholder" in recipe.featured_image.url %} -->
+                                {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-image"
                                 src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1654943500/placeholder_ynfa2w.png">
-                                <!-- {% else %} -->
+                                {% else %}
                                 <img class="card-image" src=" {{ recipe.featured_image.url }}">
-                                <!-- {% endif %} -->
+                                {% endif %}
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug  %}">
-                                <!-- <h2 class="card-title">{{ recipe.title }}</h2> -->
+                                <h2 class="card-title">{{ recipe.name }}</h2>
                                 <!-- <p class="excerpt-text">{{ recipe.excerpt }}</p> -->
                             </a>
                             <hr />
-                            <!-- <p class="card-bottom">Created by: {{ recipe.author }}  | <i class="far fa-heart"></i> -->
+                            <!-- <p class="card-bottom">Created by: {{ recipe.added_by_user }}  | <i class="far fa-heart"></i> -->
                             <!-- {{ recipe.number_of_likes }}</p> -->
                         </div>
-                    </div>
+                    </div>python3 manage.py makemigrations
                 </div>
-                <!-- {% if forloop.counter|divisibleby:3 %} -->
+                {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
-                <!-- {% endif %} -->
-                <!-- {% endfor %} -->
+                {% endif %}
+                {% endfor %}
 
             </div>
         </div>
@@ -55,6 +58,5 @@
     </nav>
     {% endif %}
 </div>
-
 
 {% endblock content %}

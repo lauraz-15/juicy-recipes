@@ -7,9 +7,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class UserRecipe(models.Model):
-    added_by_user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="user_recipe_list"
-    )
+  
     name = models.CharField(max_length=200, unique=True)
     recipe_slug = models.SlugField(max_length=200, unique=True)
     image = CloudinaryField('image', default='placeholder')
@@ -29,5 +27,4 @@ class UserRecipe(models.Model):
 
     def number_of_favorites(self):
         return self.favorites.count()
-
 

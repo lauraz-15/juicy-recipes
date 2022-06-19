@@ -17,13 +17,6 @@ def user_recipe(request):
 
 
 
-# class List_my_recipes(generic.ListView):
-#     model = UserRecipeF
-#     queryset = UserRecipe.objects.filter(posted_status=1).order_by("-created")
-#     template_name = "my_recipes.html"
-#     paginate_by = 6
-
-
 def list_my_recipes(request):
     new = UserRecipe.objects.filter(added_by_user=request.user)
     return render(
