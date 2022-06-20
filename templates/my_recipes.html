@@ -1,14 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
 
-
-{% extends 'base.html' %} {% block content %}
-{% load crispy_forms_tags %}
-
-
-<h2>This is the page where you can view and edit your recipes</h2>
-<div class="container-fluid">
+  <div class="container-fluid">
     <h2 class="title-block">
       <span class="title-text">My Recipes</span>
   </h2>
+
+  {% if user.is_authenticated %}
     <div class="row">
         <!-- Recipes cards -->
         <div class="col-12 mt-3 left" id="card-container">
@@ -27,6 +25,7 @@
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug  %}">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
+                                <!-- <p class="excerpt-text">{{ recipe.excerpt }}</p> -->
                             </a>
                             <hr />
                             <p class="card-bottom">Created by: {{ recipe.author }}  | <i class="far fa-heart"></i>
@@ -57,5 +56,8 @@
     </nav>
     {% endif %}
 </div>
+{% else %}
+<h2>Please login-in or register to see your favorite recipes!</h2>
+{% endif %}
 
-{% endblock content %}
+{%endblock%}

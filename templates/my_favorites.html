@@ -5,6 +5,8 @@
     <h2 class="title-block">
       <span class="title-text">My Favorites</span>
   </h2>
+
+  {% if user.is_authenticated %}
     <div class="row">
         <!-- Recipes cards -->
         <div class="col-12 mt-3 left" id="card-container">
@@ -54,4 +56,8 @@
     </nav>
     {% endif %}
 </div>
+{% else %}
+<h2>Please login-in or register to see your favorite recipes!</h2>
+{% endif %}
+
 {%endblock%}

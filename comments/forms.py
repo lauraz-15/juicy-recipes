@@ -1,6 +1,6 @@
 from .models import Comment, Recipe
 from django import forms
-from django_summernote.admin import SummernoteModelAdmin
+from django.forms import Textarea
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -12,5 +12,7 @@ class RecipeForm(forms.ModelForm):
     class Meta:
         model=Recipe
         fields=('title', 'slug', 'featured_image', 'ingridients', 'content', 'author', 'status')
-        summernote_fields = ('content' 'ingridients')
-        prepopulated_fields = {'slug': ('title',)}    
+        widgets = {
+            'ingridients': Textarea()
+        }
+        # prepopulated_fields = {'slug': ('title',)}    
