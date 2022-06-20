@@ -7,7 +7,6 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class UserRecipe(models.Model):
-  
     name = models.CharField(max_length=200, unique=True)
     recipe_slug = models.SlugField(max_length=200, unique=True)
     image = CloudinaryField('image', default='placeholder')

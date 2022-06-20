@@ -1,8 +1,35 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Recipe
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
+
+
+def new_recipe(request):
+    form=RecipeForm
+    if request.method=='POST':
+        recipeForm=RecipeForm(request.POST)
+        if recipeForm.is_valid():
+            recipeForm.save()
+            messages.success(request,'Recipe has been saved')
+            return redirect('/new')
+    return render(request, 'new.html', {'form': form})
+
+
+
+
+# @admin.register(Recipe)
+# class RecipeAdmin(SummernoteModelAdmin):
+
+#     summernote_fields = ('content' 'ingridients')
+
+#     list_display = ('title', 'slug', 'status', 'created_on')
+#     search_fields = ['title', 'content']
+#     list_filter = ('status', 'created_on')
+#     prepopulated_fields = {'slug': ('title',)}
+#     summernote_fields = ('content', 'ingridients')
+
 
 
 def favorite_add(request):
@@ -32,14 +59,6 @@ class Categories(generic.ListView):
     template_name = "categories.html"
     paginate_by = 6
 
-# class Favorites(generic.ListView):
-#     model = Recipe
-#     queryset = Recipe.objects.filter(status=1).order_by("-created_on")
-#     template_name = "my_favorites.html"
-#     paginate_by = 6
-#     User = request.user,liked= user.liked.all()
-
- 
 
 class RecipeDetail(View):
 
