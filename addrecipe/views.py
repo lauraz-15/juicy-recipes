@@ -17,10 +17,10 @@ def user_recipe(request):
 
 
 
-def list_my_recipes(request):
-    new = UserRecipe.objects.filter(added_by_user=request.user)
-    return render(
-        request,
-        'my_recipes.html',
-        {'new': new}
-    )
+# def list_my_recipes(request):
+#     new = UserRecipe.objects.filter(added_by_user=request.user)
+#     return render(
+#         request,
+#         'my_recipes.html',
+#         {'new': new}
+#     )

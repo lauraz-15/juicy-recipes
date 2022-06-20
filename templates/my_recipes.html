@@ -26,14 +26,13 @@
                                 {% endif %}
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug  %}">
-                                <h2 class="card-title">{{ recipe.name }}</h2>
-                                <!-- <p class="excerpt-text">{{ recipe.excerpt }}</p> -->
+                                <h2 class="card-title">{{ recipe.title }}</h2>
                             </a>
                             <hr />
-                            <!-- <p class="card-bottom">Created by: {{ recipe.added_by_user }}  | <i class="far fa-heart"></i> -->
-                            <!-- {{ recipe.number_of_likes }}</p> -->
+                            <p class="card-bottom">Created by: {{ recipe.author }}  | <i class="far fa-heart"></i>
+                            {{ recipe.number_of_likes }}</p>
                         </div>
-                    </div>python3 manage.py makemigrations
+                    </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>

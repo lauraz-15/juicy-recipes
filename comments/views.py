@@ -17,19 +17,13 @@ def new_recipe(request):
     return render(request, 'new.html', {'form': form})
 
 
-
-
-# @admin.register(Recipe)
-# class RecipeAdmin(SummernoteModelAdmin):
-
-#     summernote_fields = ('content' 'ingridients')
-
-#     list_display = ('title', 'slug', 'status', 'created_on')
-#     search_fields = ['title', 'content']
-#     list_filter = ('status', 'created_on')
-#     prepopulated_fields = {'slug': ('title',)}
-#     summernote_fields = ('content', 'ingridients')
-
+def my_recipe_list(request):
+    new = Recipe.objects.filter(author=request.user)
+    return render(
+        request,
+        'my_recipes.html',
+        {'new': new}
+    )
 
 
 def favorite_add(request):
