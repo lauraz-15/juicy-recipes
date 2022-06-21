@@ -192,17 +192,17 @@ window.onload = function() {
 async function getMultipleAPIcalls(recipeCard) {
     const categories = ["healthy", "vegetarian", "deserts", "light", "grilled", "meat", "fish", "kids"];
     const responses = await Promise.all(
-	categories.map(async categorie => {
+	categories.map(async category => {
         let APP_ID = "2f1133a1"
         let API_KEY = "63872c307c1ea5bea9706e007963df6f"
         let response = await fetch(
-            `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${categorie}`
+            `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${category}`
            
         );
         // console.log(response)
         let searchCategory = await response.json()
         console.log(searchCategory);
-        dipsplayCategoryResults(searchCategory, categorie)
+        dipsplayCategoryResults(searchCategory, category)
         // console.log(searchCategory.hits)
         
 	})

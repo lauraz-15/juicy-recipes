@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AddrecipeConfig(AppConfig):
+class CommentsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'addrecipe'
+    name = 'recipes'
