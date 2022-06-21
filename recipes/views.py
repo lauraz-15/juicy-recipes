@@ -14,14 +14,14 @@ def new_recipe(request):
             recipeForm.save()
             messages.success(request,'Recipe has been saved')
             return redirect('/new')
-    return render(request, 'new.html', {'form': form})
+    return render(request, 'recipes/new.html', {'form': form})
 
 
 def my_recipe_list(request):
     new = Recipe.objects.filter(author=request.user)
     return render(
         request,
-        'my_recipes.html',
+        'recipes/my_recipes.html',
         {'new': new}
     )
 
@@ -30,14 +30,14 @@ def favorite_add(request):
     new = Recipe.objects.filter(likes=request.user)
     return render(
         request,
-        'my_favorites.html',
+        'recipes/my_favorites.html',
         {'new': new}
     )
 
 class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by("-created_on")
-    template_name = "index.html"
+    template_name = "recipes/index.html"
     paginate_by = 6
 
 
@@ -67,7 +67,7 @@ class RecipeDetail(View):
 
         return render(
             request,
-            "recipe_detail.html",
+            "recipes/recipe_detail.html",
             {
                 "recipe": recipe,
                 "comments": comments,
@@ -97,7 +97,7 @@ class RecipeDetail(View):
 
         return render(
             request,
-            "recipe_detail.html",
+            "recipes/recipe_detail.html",
             {
                 "recipe": recipe,
                 "comments": comments,
