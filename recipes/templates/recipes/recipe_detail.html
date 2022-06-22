@@ -30,13 +30,13 @@
                     <!-- Likes button -->
                     <strong>
                         {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'recipe_like' recipe.slug%}" METHOD="POST">
+                        <form class="d-inline" action="{% url 'recipe_like' recipe.pk%}" METHOD="POST">
                             {% csrf_token %}
                             {% if liked %}
-                            <button type="submit" name="recipe_id" value="{{recipe.slug}}"><i class="fas fa-heart"></i></button>
+                            <button type="submit" name="recipe_id" value="{{recipe.pk}}"><i class="fas fa-heart"></i></button>
                             
                             {% else %}
-                            <button type="submit" name="recipe_id" value="{{recipe.slug}}"><i class="far fa-heart"></i></button>
+                            <button type="submit" name="recipe_id" value="{{recipe.pk}}"><i class="far fa-heart"></i></button>
                             {% endif %}
                         </form>
                         {% else %}

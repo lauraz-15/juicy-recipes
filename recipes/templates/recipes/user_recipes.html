@@ -22,31 +22,30 @@
    <br><span class="second-line"><span class="then">Then we do</span><br><span class="third"> everything else."</span></span> </h1>
     <h3 class="author">M.F.K.Fisher</h3>
 </div>
-<h2>Old Recipes</h2>
+
+
+<h2>New Recipes</h2>
 <div class="container-fluid">
     <div class="row">
         <!-- Recipes cards -->
         <div class="col-12 mt-3 left" id="card-container">
             <div class="row">
-                {% for recipe in recipe_list %}
+                {% for recepte in receptes %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in recipe.featured_image.url %}
-                                <img class="card-image"
-                                src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1654943500/placeholder_ynfa2w.png">
-                                {% else %}
-                                <img class="card-image" src=" {{ recipe.featured_image.url }}">
-                                {% endif %}
+                               
+                                <img class="card-image" src=" {{ recepte.image.url }}">
+                             
                             </div>
-                            <a href="{% url 'recipe_detail' recipe.pk  %}">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
-                                <!-- <p class="excerpt-text">{{ recipe.excerpt }}</p> -->
-                            </a>
+                            <!-- <a href="{% url 'recipe' recepte.pk  %}"> -->
+                                <h2 class="card-title">{{ recepte.name }}</h2>
+    
+                            <!-- </a> -->
                             <hr />
-                            <p class="card-bottom">Created by: {{ recipe.author }}  | <i class="far fa-heart"></i>
-                            {{ recipe.number_of_likes }}</p>
+                            <p class="card-bottom">Created at: | {{ recepte.created_at }} <i class="far fa-heart"></i>
+                           </p>
                         </div>
                     </div>
                 </div>
@@ -73,7 +72,4 @@
     </nav>
     {% endif %}
 </div>
-
-
-
 {%endblock%}
