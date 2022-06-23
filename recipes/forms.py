@@ -30,7 +30,7 @@ class CommentForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model=Recipe
-        fields=('title', 'featured_image', 'ingridients', 'author', 'content')
+        fields=('title', 'featured_image', 'ingridients', 'content', 'author')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'featured_image': forms.FileInput(attrs={'class': 'form-control'}),
@@ -38,9 +38,9 @@ class RecipeForm(forms.ModelForm):
             'content': forms.Textarea(attrs={'class': 'form-control'}),
         }
         labels = {
-            'title': 'Enter the title of your recipe:',
-            'featured_image': 'Select a photo: ',
-            'ingridients': 'List the ingridients here: ',
-            'content': 'Enter directions how to make this recipe and any extra comments information you would like to add: ',
+            'title': 'Enter the title of your recipe',
+            'featured_image': 'Select a photo',
+            'ingridients': 'List the ingridients here',
+            'content': 'Enter directions how to make this recipe and any extra information you would like to add',
         }
        

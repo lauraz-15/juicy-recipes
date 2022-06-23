@@ -1,27 +1,61 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="new-recipe">
+<h2 class="title-block">
+    <span class="title-text">Add a new Recipe:</span>
+</h2>
+<div class="container-fluid container">
     {% for message in messages %}
     <br>
     <p>{{message}}</p>
         {% endfor %}
-    <p>Posting as: {{ user.username }}</p>
-    <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        
-        <table>
-            {{ form.media}}
-            {{ form.as_table}}
-            <tr>
+    <div class="row">
+      <div class="col-12 mt-3 left">
+          <div class="row search-results" id="new-recipe-container">
+            <p>Posting as: {{ user.username }}</p>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{ form.media}}
+                {{ form.as_p}}
+                <tr>
                 <td>
-                    <button class="btn btn-success" type="submit">Submit</button>
+                <button class="btn btn-success" type="submit">Submit</button>
                 </td>
-            </tr>
-        </table>
-    </form>
-    
-</div>
+                </tr>
+            </table>
+            </form>
+          </div>
+      </div>
+    </div>
+
+
+<!-- <div class="new-recipe">
+    {% for message in messages %}
+    <br>
+    <p>{{message}}</p>
+        {% endfor %}
+
+    <h2>Add new recipe:</h2>
+    <div id="new-recipe-container">
+        <p>Posting as: {{ user.username }}</p>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <table>
+                {{ form.media}}
+                {{ form.as_p}}
+                <tr>
+                    <td>
+                        <button class="btn btn-success" type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+    </div>
+ 
+</div> -->
 
 
 

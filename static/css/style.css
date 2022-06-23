@@ -238,7 +238,10 @@ textarea {
 
 /* ----- ADD RECIPE ------ */
 
-.new-recipe {
-    margin: 50px auto;
-    width: 50%;
+
+#new-recipe-container {
+    margin: 5% 12% 7%;
+    width: fit-content;
+    font-size: large;
+    padding: 20px;
 }
