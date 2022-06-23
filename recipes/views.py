@@ -70,7 +70,7 @@ def new_recipe(request):
     if request.method=='POST':
         recipeForm=RecipeForm(request.POST, request.FILES)
         if recipeForm.is_valid():
-            form.instance.user = self.request.user
+            # form.instance.user = self.request.user
             recipeForm.save()
             messages.success(request,'Recipe has been saved')
             # return redirect('recipes/new')

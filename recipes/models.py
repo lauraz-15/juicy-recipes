@@ -2,12 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from datetime import datetime
+from ckeditor.fields import RichTextField
 
 
 class Recepte(models.Model):
     name = models.CharField(max_length=200, null=False, blank=False)
     ingridients_list = models.TextField()
-    directions = models.TextField()
+    directions = RichTextField(blank=True, null=True)
     image = CloudinaryField('image', default='placeholder')
     published = models.BooleanField(default=True)
     created_at = models.DateTimeField(default=datetime.now, blank=True)
@@ -25,17 +26,17 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    # slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_list"
     )
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    ingridients = models.TextField()
-    content = models.TextField()
+    ingridients = RichTextField(blank=True, null=True)
+    content = RichTextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(
         User, related_name='recipe_like', blank=True)
 
