@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+import cloudinary
+import cloudinary.uploader
 from cloudinary.models import CloudinaryField
 from datetime import datetime
 from ckeditor.fields import RichTextField
