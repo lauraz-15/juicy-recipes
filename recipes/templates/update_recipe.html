@@ -4,6 +4,7 @@
 <h2 class="title-block">
     <span class="title-text">Update Recipe:</span>
 </h2>
+{% if user.is_authenticated %}
 <div class="container-fluid container">
     {% for message in messages %}
     <br>
@@ -28,7 +29,9 @@
           </div>
       </div>
     </div>
-
+{% else %}
+<h2 class="auth-message">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">sign in</a>to access this page.</h2>
+{% endif %}
 
 <!-- <div class="new-recipe">
     {% for message in messages %}

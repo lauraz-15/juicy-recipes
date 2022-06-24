@@ -5,6 +5,7 @@
     <span class="title-text">Delete Recipe:</span>
 </h2>
 <br>
+{% if user.is_authenticated %}
 <div class="container-fluid container delete">
     <div class="row">
         <div class="col-md-4">
@@ -35,5 +36,10 @@
     </div>   
     </div>
 </div>
+
+{% else %}
+<h2 class="auth-message">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">sign in</a>to access this page.</h2>
+{% endif %}
+
 {% endblock content %}
 
