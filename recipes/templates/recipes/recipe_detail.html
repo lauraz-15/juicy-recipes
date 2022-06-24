@@ -54,16 +54,29 @@
             </div>
            
         </div>
-        <h3 class="directions">Directions:</h3>
-        <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-3 left">
+                    <h3 class="directions">Directions:</h3>
+                    <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
+                    <div class="button-area">
+                        <a href="{% url 'update_recipe' recipe.pk  %}">
+                            <button class="btn btn-success" type="submit">Edit</button>
+                        </a>
+                        <a href="{% url 'delete_recipe' recipe.pk  %}">
+                            <button class="btn btn-success" id="delete" type="submit">Delete</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>
-<a href="{% url 'update_recipe' recipe.pk  %}">
-    <button class="btn btn-success" type="submit">Edit</button>
-</a>
-<a href="{% url 'delete_recipe' recipe.pk  %}">
-    <button class="btn btn-success" type="submit">Delete</button>
-</a>
+
+
+
 <br>
 <div class="container">
 

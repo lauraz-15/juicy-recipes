@@ -122,9 +122,8 @@ a {
 .card {
     max-width: 360px;
     max-height: 360px;
-    margin: 13px;
+    margin: 15px auto;
 }
-
 
 /* ----- FOOTER ------ */
 
@@ -196,7 +195,13 @@ h3 {
     display: inline-block;
 }
 
+.button-area {
+    text-align: right;
+}
 
+#delete {
+    background-color:#FF1616;
+}
 /* ----- COMMENTS SECTION ------ */
 
 
