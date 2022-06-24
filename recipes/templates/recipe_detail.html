@@ -3,8 +3,9 @@
 
 <div class="masthead">
     <div class="container" id="detail-content">
+        <p>Current user is : {{ user.id }} </p>
         <h2 class="title-block">
-            <span class="title-text">{{ recipe.title }}</span>
+            <span class="title-text">{{ recipe.title }} - {{ recipe.author.id }}</span>
         </h2>
         <div class="row g-0">
             <div class="d-none d-md-block col-md-6 masthead-image" id="detail-image">
@@ -60,14 +61,16 @@
                     <h3 class="directions">Directions:</h3>
                     <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
                     {% if user.is_authenticated %}
-                    <div class="button-area">
-                        <a href="{% url 'update_recipe' recipe.pk  %}">
-                            <button class="btn btn-success" type="submit">Edit</button>
-                        </a>
-                        <a href="{% url 'delete_recipe' recipe.pk  %}">
-                            <button class="btn btn-success" id="delete" type="submit">Delete</button>
-                        </a>
-                    </div>
+                        {% if user.id == recipe.author.id %}
+                        <div class="button-area">
+                            <a href="{% url 'update_recipe' recipe.pk  %}">
+                                <button class="btn btn-success" type="submit">Edit</button>
+                            </a>
+                            <a href="{% url 'delete_recipe' recipe.pk  %}">
+                                <button class="btn btn-success" id="delete" type="submit">Delete</button>
+                            </a>
+                        </div>
+                        {% endif %}
                     {% endif %}
 
                 </div>

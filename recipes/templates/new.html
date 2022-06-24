@@ -25,6 +25,7 @@
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <table>
+
                     {{ form.media}}
                     {{ form.as_p}}
                     <tr>
@@ -37,6 +38,8 @@
             </div>
         </div>
         </div>
+
+
 
 {% else %}
 <h2 class="auth-message">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">sign in</a>, so you can add new recipes!</h2>
@@ -76,6 +79,12 @@
 
 
 
-
+<script type="text/javascript" src="{ static 'recipes/js/new.js'}"></script>
 
 {%endblock%}
+<!-- <script>
+    let loggedInUser = "{{ user.id }}";
+    docuemnt.getElementById("logged").placeholder = loggedInUser;
+
+    console.log("This is connected!")
+</script> -->

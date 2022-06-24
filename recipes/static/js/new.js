@@ -1,0 +1,1 @@
+console.log("This is connectec from new script js file!")

@@ -34,26 +34,26 @@ class ListReceptes(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         users = User.objects.filter(username=query)
-        if query:
-            receptes = self.model.objects.filter(
-                Q(name__icontains=query) |
-                Q(directions__icontains=query) |
-                Q(user__in=users)
-            )
-        else: 
-            receptes = Recepte.objects.order_by('-created_at')
-        return receptes
-    # receptes = Recepte.objects.filter(published=True).order_by("-created_at")
+        # if query:
+        #     receptes = self.model.objects.filter(
+        #         Q(name__icontains=query) |
+        #         Q(directions__icontains=query) |
+        #         Q(user__in=users)
+        #     )
+        # else: 
+        #     receptes = Recepte.objects.order_by('-created_at')
+        # return receptes
+        receptes = Recepte.objects.filter(published=True).order_by("-created_at")
 
-    # context = {
-    #     'receptes': receptes
-    # }
+        context = {
+            'receptes': receptes
+        }
 
-    # return render(request, 'recipes/user_recipes.html', context)
+        return render(request, 'recipes/user_recipes.html', context)
 
 
 
-def addRecepte(request):
+def addRecepte(request, self):
     form = RecepteForm()
 
     if request.method == 'POST':
@@ -81,7 +81,6 @@ def new_recipe(request):
             messages.success(request,'Recipe has been saved')
             # return redirect('recipes/new')
     return render(request, 'new.html', {'form': form})
-
 
 def my_recipe_list(request):
     new = Recipe.objects.filter(author=request.user)
