@@ -3,7 +3,7 @@ from django.urls import path
 from .views import UpdateRecipeView, ListView, DeleteRecipeView
 
 urlpatterns = [
-    path('', views.RecipeList.as_view(), name="home"),
+  
     path("user_recipes", views.ListReceptes.as_view(), name="user_recipes"),
     path("my_favorites/", views.favorite_add, name="my_favorites"),
     path("my_recipes/", views.my_recipe_list, name="my_recipes"),
