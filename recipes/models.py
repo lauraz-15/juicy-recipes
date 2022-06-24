@@ -5,6 +5,7 @@ import cloudinary.uploader
 from cloudinary.models import CloudinaryField
 from datetime import datetime
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 
 
 class Recepte(models.Model):
@@ -17,10 +18,9 @@ class Recepte(models.Model):
 
     def __str__(self):
         return self.name
-    
 
-
-
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 STATUS = ((0, "Draft"), (1, "Published"))

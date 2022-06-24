@@ -8,15 +8,15 @@ from django.contrib.auth.models import User
 from .forms import CommentForm, RecipeForm, RecepteForm
 from django.db.models import Q
 
+class UpdateRecipeView(UpdateView):
+    model = Recipe
+    template_name = 'recipes/update_recipe.html'
+    fields = ('title', 'featured_image', 'ingridients', 'content', 'author')
+
+    def get_success_url(self):
+        return reverse('home')
 
 
-# def list_receptes(request):
-#     new = Recepte.objects.filter(published=True)
-#     return render(
-#         request,
-#         'recipes/user_recipes.html',
-#         {'new': new}
-#     )
 
 class ListReceptes(ListView):
     template_name = "recipes/user_recipes.html"
@@ -70,7 +70,6 @@ def new_recipe(request):
     if request.method=='POST':
         recipeForm=RecipeForm(request.POST, request.FILES)
         if recipeForm.is_valid():
-            # form.instance.user = self.request.user
             recipeForm.save()
             messages.success(request,'Recipe has been saved')
             # return redirect('recipes/new')

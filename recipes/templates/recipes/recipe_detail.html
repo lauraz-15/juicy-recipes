@@ -58,6 +58,9 @@
         <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
     </div>
 </div>
+<a href="{% url 'update_recipe' recipe.pk  %}">
+    <button class="btn btn-success" type="submit">Edit</button>
+</a>
 <br>
 <div class="container">
 
