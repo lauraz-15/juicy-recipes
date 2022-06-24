@@ -20,6 +20,7 @@ class Recepte(models.Model):
         return self.name
 
     def get_absolute_url(self):
+        return reverse('recipe_detail', args=(str(self.id)))
         return reverse('home')
 
 
@@ -50,6 +51,9 @@ class Recipe(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 class Comment(models.Model):

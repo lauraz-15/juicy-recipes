@@ -7,6 +7,14 @@ from .models import Recipe, Recepte
 from django.contrib.auth.models import User
 from .forms import CommentForm, RecipeForm, RecepteForm
 from django.db.models import Q
+from django.urls import reverse_lazy
+
+
+class DeleteRecipeView(DeleteView):
+    model = Recipe
+    template_name = 'recipes/delete_recipe.html'
+    success_url = reverse_lazy('home')
+
 
 class UpdateRecipeView(UpdateView):
     model = Recipe
@@ -15,7 +23,6 @@ class UpdateRecipeView(UpdateView):
 
     def get_success_url(self):
         return reverse('home')
-
 
 
 class ListReceptes(ListView):
