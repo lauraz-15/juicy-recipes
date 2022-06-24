@@ -59,6 +59,7 @@
                 <div class="col-12 mt-3 left">
                     <h3 class="directions">Directions:</h3>
                     <p class="card-text" id="ingridients-list">{{ recipe.content | safe }}</p>
+                    {% if user.is_authenticated %}
                     <div class="button-area">
                         <a href="{% url 'update_recipe' recipe.pk  %}">
                             <button class="btn btn-success" type="submit">Edit</button>
@@ -67,6 +68,7 @@
                             <button class="btn btn-success" id="delete" type="submit">Delete</button>
                         </a>
                     </div>
+                    {% endif %}
 
                 </div>
             </div>

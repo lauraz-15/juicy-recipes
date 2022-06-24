@@ -250,3 +250,8 @@ textarea {
     font-size: large;
     padding: 20px;
 }
+
+.auth-message {
+    text-align: center;
+    margin-top: 50px;
+}

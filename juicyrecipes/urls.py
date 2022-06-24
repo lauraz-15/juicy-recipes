@@ -27,5 +27,3 @@ urlpatterns = [
     path('recipes/', include('recipes.urls'), name='recipes_urls'),
     path('api/', include('api.urls'), name='api_urls'),
 ]
-
-
