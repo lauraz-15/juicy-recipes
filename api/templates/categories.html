@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'api/css/api.css' %}">
+{% endblock %}
+
+
 {% block content %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="categories-navbar" class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">Navbar</a>
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <div class="collapse navbar-collapse categories-navbar center" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+      <span>Categories</span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mb-2 mb-lg-0" id="category-nav-items">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Healthy</a>
         </li>

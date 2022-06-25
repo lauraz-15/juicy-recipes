@@ -7,8 +7,12 @@
 
 /* ----- CATEGORIES ------ */
 
-.categories-navbar {
+#categories-navbar {
     background-color: #fffadc;
-    text-align: center;
+}
+
+#category-nav-items > li {
+    margin: 0 13px;
+    padding: 0;
 }
 

@@ -42,9 +42,9 @@ async function sendAPIcall() {
                             <h2 class="card-title">${recipe.recipe.label}</h2>
                             <hr />
                             <small>
-                                <p class="card-bottom">Source: 
-                                <span class="created-by">${recipe.recipe.source}</span>
-                                </p>
+                            <p class="card-bottom">Source: 
+                            <span class="created-by">${recipe.recipe.source}</span> 
+                            </p>
                             </small>
                         </div>
                     </div>
