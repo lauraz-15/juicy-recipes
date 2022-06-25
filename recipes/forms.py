@@ -36,7 +36,7 @@ class RecipeForm(forms.ModelForm):
             'featured_image': forms.FileInput(attrs={'class': 'form-control'}),
             'ingridients': forms.Textarea(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
-            'author': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'user_name', 'id': 'logged'}),
+            'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'logged', 'type':'hidden'}),
         }
         labels = {
             'title': 'Enter the title of your recipe',

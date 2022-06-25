@@ -1,0 +1,15 @@
+
+/* ----- ADD RECIPE ------ */
+
+
+#new-recipe-container {
+    margin: 5% 12% 7%;
+    width: fit-content;
+    font-size: large;
+    padding: 20px;
+}
+
+.auth-message {
+    text-align: center;
+    margin-top: 50px;
+}

@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
 {% endblock %}
 {% block content %}
 
@@ -75,11 +76,19 @@
 
 
 
+{% block javascript %}
+{{ block.super }}
+<script src="{% static 'recipes/js/new.js' %}"></script>
+
+<script>
+     let loggedInUser = "{{ user.id }}";
+     document.getElementById("logged").value = loggedInUser;
+</script>
+{% endblock %}
 
 
 
-
-<script type="text/javascript" src="{ static 'recipes/js/new.js'}"></script>
+<!-- <script type="text/javascript" src="{ static 'recipes/js/new.js'}"></script> -->
 
 {%endblock%}
 <!-- <script>
