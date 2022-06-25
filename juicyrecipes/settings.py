@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'recipes',
-    'ckeditor'
+    'ckeditor',
+    'api',
 ]
 
 SITE_ID = 1
