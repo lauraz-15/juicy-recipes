@@ -3,9 +3,9 @@ from django.views import generic, View
 from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Recipe, Recepte
+from .models import Recipe
 from django.contrib.auth.models import User
-from .forms import CommentForm, RecipeForm, RecepteForm
+from .forms import CommentForm, RecipeForm
 from django.db.models import Q
 from django.urls import reverse_lazy
 
@@ -24,54 +24,6 @@ class UpdateRecipeView(UpdateView):
     def get_success_url(self):
         return reverse('home')
 
-
-class ListReceptes(ListView):
-    template_name = "recipes/user_recipes.html"
-    model = Recepte
-    success_url = "/user_recipes/"
-    context_object_name = 'receptes'
-
-    def get_queryset(self):
-        query = self.request.GET.get('q')
-        users = User.objects.filter(username=query)
-        # if query:
-        #     receptes = self.model.objects.filter(
-        #         Q(name__icontains=query) |
-        #         Q(directions__icontains=query) |
-        #         Q(user__in=users)
-        #     )
-        # else: 
-        #     receptes = Recepte.objects.order_by('-created_at')
-        # return receptes
-        receptes = Recepte.objects.filter(published=True).order_by("-created_at")
-
-        context = {
-            'receptes': receptes
-        }
-
-        return render(request, 'recipes/user_recipes.html', context)
-
-
-
-def addRecepte(request, self):
-    form = RecepteForm()
-
-    if request.method == 'POST':
-        form = RecepteForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            # return redirect('recipes/add_recepte')
-    else:
-        form = RecepteForm()
-
-    context = {
-        "form":form
-    }
-
-    return render(request, 'recipes/add_recepte.html', context)
-
-
-
 def new_recipe(request):
     form=RecipeForm
     if request.method=='POST':
@@ -79,7 +31,6 @@ def new_recipe(request):
         if recipeForm.is_valid():
             recipeForm.save()
             messages.success(request,'Recipe has been saved')
-            # return redirect('recipes/new')
     return render(request, 'new.html', {'form': form})
 
 def my_recipe_list(request):

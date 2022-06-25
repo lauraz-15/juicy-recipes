@@ -8,22 +8,6 @@ from ckeditor.fields import RichTextField
 from django.urls import reverse
 
 
-class Recepte(models.Model):
-    name = models.CharField(max_length=200, null=False, blank=False)
-    ingridients_list = models.TextField()
-    directions = RichTextField(blank=True, null=True)
-    image = CloudinaryField('image', default='placeholder')
-    published = models.BooleanField(default=True)
-    created_at = models.DateTimeField(default=datetime.now, blank=True)
-
-    def __str__(self):
-        return self.name
-
-    def get_absolute_url(self):
-        return reverse('recipe_detail', args=(str(self.id)))
-        return reverse('home')
-
-
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
