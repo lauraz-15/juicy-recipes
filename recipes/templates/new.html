@@ -5,15 +5,14 @@
 {{ block.super }}
 <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
 {% endblock %}
+
+
 {% block content %}
-
-
 
     <h2 class="title-block">
         <span class="title-text">Add a new Recipe:</span>
     </h2>
     {% if user.is_authenticated %}
-    <p id="idtest">TEST CSS LINK!</p>
     <div class="container-fluid container">
         {% for message in messages %}
         <br>
@@ -39,61 +38,16 @@
             </div>
         </div>
         </div>
-
-
-
 {% else %}
 <h2 class="auth-message">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">sign in</a>, so you can add new recipes!</h2>
 {% endif %}
 
-
-<!-- <div class="new-recipe">
-    {% for message in messages %}
-    <br>
-    <p>{{message}}</p>
-        {% endfor %}
-
-    <h2>Add new recipe:</h2>
-    <div id="new-recipe-container">
-        <p>Posting as: {{ user.username }}</p>
-        <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            
-            <table>
-                {{ form.media}}
-                {{ form.as_p}}
-                <tr>
-                    <td>
-                        <button class="btn btn-success" type="submit">Submit</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-        
-    </div>
- 
-</div> -->
-
-
-
 {% block javascript %}
 {{ block.super }}
-<script src="{% static 'recipes/js/new.js' %}"></script>
-
 <script>
      let loggedInUser = "{{ user.id }}";
      document.getElementById("logged").value = loggedInUser;
 </script>
 {% endblock %}
 
-
-
-<!-- <script type="text/javascript" src="{ static 'recipes/js/new.js'}"></script> -->
-
 {%endblock%}
-<!-- <script>
-    let loggedInUser = "{{ user.id }}";
-    docuemnt.getElementById("logged").placeholder = loggedInUser;
-
-    console.log("This is connected!")
-</script> -->

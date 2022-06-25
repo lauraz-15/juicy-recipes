@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'api/css/api.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="input-group" id="search">
     <input type="text" class="form-control" id="text-value" placeholder="Search Recipes" aria-label="Search" aria-describedby="button-addon2">
@@ -14,4 +21,11 @@
         </div>
       </div>
 </div>
-{%endblock%}
+
+<p id="laura">TEST</p>
+{% endblock %}
+
+{% block javascript %}
+{{ block.super }}
+<script src="{% static 'api/js/search.js' %}"></script>
+{% endblock %}

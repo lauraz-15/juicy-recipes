@@ -9,7 +9,7 @@
 
 
 function texting() {
-    console.log("Main js file is connected on this page!")
+    console.log("Main js file is connected from the main.js page!")
 }
 
 texting();
