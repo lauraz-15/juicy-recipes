@@ -6,13 +6,15 @@
 
 #main-nav {
     border-bottom: 0.5px solid #fffadc;
-    background-color: #E4F5E7;
+    /* background-color: #E4F5E7;
+    opacity: .4; */
+    background: rgba(228, 245, 231, .5);
     margin: 0 10px;
     margin: 0;
 }
 
 #main-middle {
-    margin-right: 90px;;
+    margin-right: 90px;
 }
 
 #main-middle > li {
@@ -38,25 +40,28 @@
 /* ----- HERO LANDING PAGE ------ */
 
 .hero-image {
-    min-height: 800px;
-    background:url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png) rgba(40, 40, 40, 0.5);
-    background-size: cover;
-    background-blend-mode: overlay;
+    height: 60vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png) rgba(40, 40, 40, 0.5) no-repeat fixed; 
+    /* background-size: cover;
+    background-blend-mode: overlay; */
   }
 
   h1 {
       color: #fffadc;
-      font-size: 8rem;
+      font-size: 9rem;
       font-family: 'Abril Fatface';
       text-align: center;
-      padding: 130px;
+      /* padding: 130px; */
       font-weight: normal;
-      line-height: 0.8;
+      line-height: 0.4;
+  }
 
+  .hero-text {
+      padding-top: 180px;
   }
 
   .then {
-      font-size: 4rem;
+      font-size: 2rem;
       font-weight: 400;
   }
 
@@ -64,15 +69,14 @@
       text-transform: uppercase;
       font-family: 'Nanum Gothic', sans-serif;
       color: #fffadc;
-      font-size: 5rem;
+      font-size: 4rem;
       letter-spacing: 3px;
   }
 
   .third {
       font-weight: bold;
       border-bottom: 5px solid;
-      padding-bottom: 10px;
-      letter-spacing: 6px;
+      letter-spacing: 7px;
   }
 
   .author {
