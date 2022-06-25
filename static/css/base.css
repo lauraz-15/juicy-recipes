@@ -78,17 +78,18 @@
 /* ----- RECIPE CARDS ------ */
 
 #card-container {
-    width: 86%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .card-body {
-    padding: 0;
+    padding: 0px;
 }
 
 .card-body:hover {
     border-bottom: 3px solid yellow;
     border-right: 3px solid yellow;
+    background-color: #E4F5E7;
 }
 
 h2 {
@@ -97,8 +98,7 @@ h2 {
     font-weight: 500;
     display: block;
     line-height: 1.3;
-    padding: 1rem;
-    padding-bottom: 0;
+    margin: 1rem;
 }
 
 a {
@@ -106,15 +106,27 @@ a {
 }
 
 .card-image {
-    height: 230px;
+    object-fit: cover;
+    height: 245px;
     width: 100%;
     padding: 0 !important;
 }
 
+.card-title {
+    display: block;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
 .card-bottom {
+    color: grey;
+    margin-left: 1rem;
+}
+
+.created-by {
     color: #F47A00;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
 }
 
 .card {
@@ -218,20 +230,3 @@ textarea {
     color: #fffadc;
     background-color: #439A86;
 }
-
-
-/* ----- SEARCH ------ */
-
-
-#search {
-    width: 50%;
-    margin: 10% auto;
-}
-
-/* ----- CATEGORIES ------ */
-
-.categories-navbar {
-    background-color: #fffadc;
-    text-align: center;
-}
-

@@ -29,8 +29,13 @@
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                             </a>
                             <hr />
-                            <p class="card-bottom">Created by: {{ recipe.author }}  | <i class="far fa-heart"></i>
-                            {{ recipe.number_of_likes }}</p>
+                            <small> 
+                                <p class="card-bottom">Created by: <span class="created-by">{{ recipe.author }}</span>    
+                                <i class="far fa-heart"></i>
+                                <span id="number-l">{{ recipe.number_of_likes }}</span>
+                                </p>
+                            </small>
+                           
                         </div>
                     </div>
                 </div>
