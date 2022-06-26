@@ -6,11 +6,12 @@
 
 #main-nav {
     border-bottom: 0.5px solid #fffadc;
-    /* background-color: #E4F5E7;
-    opacity: .4; */
-    background: rgba(228, 245, 231, .5);
-    margin: 0 10px;
+     background-color: #E4F5E7;
+    /* background: rgba(228, 245, 231, .5); */
     margin: 0;
+    /* position: sticky; */
+    width: 100%;
+    z-index: 9;
 }
 
 #main-middle {

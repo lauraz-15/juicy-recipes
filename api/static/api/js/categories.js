@@ -37,7 +37,7 @@ function dipsplayCategoryResults(searchCategory, categorie) {
 // MULTIPLE API CALLS FOR CATEGORIES:
 
 async function getMultipleAPIcalls(recipeCard) {
-    const categories = ["healthy", "vegetarian", "deserts", "light", "grilled", "meat", "fish", "kids"];
+    const categories = ["healthy", "vegetarian", "pastries", "light", "grilled", "meat", "fish", "kids"];
     const responses = await Promise.all(
 	categories.map(async category => {
         let APP_ID = "2f1133a1"

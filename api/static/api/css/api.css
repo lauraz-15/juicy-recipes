@@ -10,6 +10,9 @@
 #categories-navbar {
     /* background-color: #fffadc; */
     background: rgba(255, 122, 89, .5);
+    z-index: 9;
+    position: fixed;
+    width: 100%;
 }
 
 #category-nav-items > li {
