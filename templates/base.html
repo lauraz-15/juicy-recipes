@@ -26,7 +26,6 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
-
     <!-- Navigation -->
       <nav id="main-nav" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -39,7 +38,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="main-middle">
-                  
+                     <!-- Main menu items nav-bar -->
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'categories' %}">Inspiration</a>
                     </li>
@@ -62,7 +61,7 @@
                     </li>
                     {% endif %}
                     </ul>
-
+                     <!-- User athentication nav-bar -->
                     <ul id="login-bar" class="navbar-nav ms-auto mb-2 mb-lg-0 nav navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -77,11 +76,20 @@
                     </li>
                     {% endif %}
                 </ul>
-           
             </div>
         </div>
     </nav>
 <!-- <img src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png"> -->
+    <div class="container" id="message-box">
+        <div class="row col-md-6 offset-md-3">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->

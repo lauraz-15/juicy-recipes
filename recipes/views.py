@@ -6,23 +6,31 @@ from django.http import HttpResponseRedirect
 from .models import Recipe
 from django.contrib.auth.models import User
 from .forms import CommentForm, RecipeForm
-from django.db.models import Q
 from django.urls import reverse_lazy
 
 
 class DeleteRecipeView(DeleteView):
     model = Recipe
     template_name = 'delete_recipe.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('my_recipes')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        messages.success(self.request, 'Recipe deleted')
+        return super(DeleteView, self).form_valid(form)
 
 
 class UpdateRecipeView(UpdateView):
     model = Recipe
     template_name = 'update_recipe.html'
     fields = ('title', 'featured_image', 'ingridients', 'content', 'author')
+    success_url = reverse_lazy('my_recipes')
 
-    def get_success_url(self):
-        return reverse('home')
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        messages.success(self.request, 'Recipe updated successfully')
+        return super(UpdateRecipeView, self).form_valid(form)
+
 
 def new_recipe(request):
     form=RecipeForm
@@ -30,7 +38,7 @@ def new_recipe(request):
         recipeForm=RecipeForm(request.POST, request.FILES)
         if recipeForm.is_valid():
             recipeForm.save()
-            messages.success(request,'Recipe has been saved')
+            messages.success(request, 'Recipe has been posted')
     return render(request, 'new.html', {'form': form})
 
 def my_recipe_list(request):
