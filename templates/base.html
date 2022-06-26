@@ -2,29 +2,40 @@
 
 <!DOCTYPE html>
 <html class="h-100">
-
 <head>
+    <!-- Title -->
     <title>Juicy Recipes</title>
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!--Meta data -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="description" 
+    content="Juicy Recipes, The platform to create, share and save mouthwatering recipes.">
+    <meta name="keywords" content="juicy, meal, cook, tasty, mouthwatering, ingridients, food, recipies, recipe sharing">
+    <meta name="author" content="Laura Zvirbule">
+   
    {% block css %} 
+   <!--Bootstrap CSS -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+   <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/regular.min.css">
     <link rel="stylesheet" href="~/lib/Font-Awesome/css/solid.min.css">
+     <!--Main CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-   
     {% endblock %}
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <!-- Bootstarp JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
 </head>
-
+ <!-- Content -->
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
       <nav id="main-nav" class="navbar navbar-expand-lg navbar-light">
@@ -48,7 +59,6 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'home' %}">Recipes</a>
                     </li>
-                  
                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'new' %}">Add Recipe</a>
                     </li>
@@ -79,8 +89,7 @@
             </div>
         </div>
     </nav>
-<!-- <img src="https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png"> -->
- <!-- User messages/feedback  -->
+ <!-- User messages/feedback conainer -->
     <div class="container" id="message-box">
         <div class="row col-md-6 offset-md-3">
             {% for message in messages %}
@@ -91,13 +100,15 @@
             {% endfor %}
         </div>
     </div>
+
+ <!-- Content from templates -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
     
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="text-center">Made by Laura Zvirbule</p>
         <p class="text-center">Follow us: <i class="fab fa-facebook-square ms-3"></i>
@@ -109,5 +120,4 @@
     <script src="{% static 'js/main.js' %}"></script>
     {% endblock %}
 </body>
-
 </html>

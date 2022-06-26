@@ -153,18 +153,19 @@ Platform is built using Django Python-based framework, additionally Javascript i
 
 ### Other Libraries and Softwares
 
-- [Git](https://git-scm.com/) used for ersion control.
-- [GitHub](https://github.com/) used to organise code, add user stories, version control, deployment.
+- [Git](https://git-scm.com/) used for ersion control
+- [GitHub](https://github.com/) used to organise code, add user stories, version control, deployment
 - [Gitpod](https://www.gitpod.io/) used for building the project
 
 #### Design
 - [Balsamiq](https://balsamiq.com/) used to draw the structure of planned design
-- [Google Fonts](https://fonts.google.com/) used to import fonts to the site and logo creation.
-- [Bootstrap](https://getbootstrap.com/) used for some pre-styled structures like nav bar core design and responsive functionality.
+- [Google Fonts](https://fonts.google.com/) used to import fonts to the site and logo creation
+- [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop/landpa.html?mv=search&mv=search&sdid=GVTYXZY8&ef_id=EAIaIQobChMIwpqqpN7L-AIVoejtCh3rzQuuEAAYASAAEgKNqfD_BwE:G:s&s_kwcid=AL!3085!3!594259336243!e!!g!!photoshop%20adobe!17011954559!138864791987&gclid=EAIaIQobChMIwpqqpN7L-AIVoejtCh3rzQuuEAAYASAAEgKNqfD_BwE) used to create a logo
+- [Bootstrap](https://getbootstrap.com/) used for some pre-styled structures like nav bar core design and responsive functionality
 - [Font Awesome](https://fontawesome.com/) used to get icons(heart, comment)
-- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools) used to debug code find positioning issues.
-- [Favicon.io](https://favicon.io/) used to create the favicon for the site.
-- [SmartDraw](https://cloud.smartdraw.com/) used for drawing the schema for database models.
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools) used to debug code find positioning issues
+- [Favicon.io](https://favicon.io/) used to create the favicon for the site
+- [SmartDraw](https://cloud.smartdraw.com/) used for drawing the schema for database models
 
 #### Testing and Validation
 - [W3C Markup Validation Service](https://validator.w3.org/) used to test HTML
@@ -172,7 +173,7 @@ Platform is built using Django Python-based framework, additionally Javascript i
 - [Pep8](http://pep8online.com/) used to test and validate python code
 - [JSHint](https://jshint.com/) used to test and validate Javascript code
 - [Summernote](https://summernote.org/) used to edit recipes on admin site
-- [Heroku](https://www.heroku.com/) used to connect Cloudinary and Postgres and deploy the project.
+- [Heroku](https://www.heroku.com/) used to connect Cloudinary and Postgres and deploy the project
 
 [Back to top ⇧](#juicy-recipes)
 
