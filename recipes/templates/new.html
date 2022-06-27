@@ -13,10 +13,10 @@
         <span class="title-text">Add a new Recipe:</span>
     </h2>
     {% if user.is_authenticated %}
-    <div class="container-fluid container">
+    <div>
         <div class="row">
-        <div class="col-12 mt-3 left">
-            <div class="row" id="new-recipe-container">
+        <div class="col-12">
+            <div class="row">
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <table>

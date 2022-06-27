@@ -31,6 +31,8 @@ async function sendAPIcall() {
         searchData.hits.map(recipe=> {
         var recipeCard = document.createElement('div');
         recipeCard.classList.add('col-md-4')
+        recipeCard.classList.add('col-md-6')
+        recipeCard.classList.add('col-lg-4')
         recipeCard.innerHTML = 
               `  <a href="${recipe.recipe.url}" target="_blank">
                     <div class="card mb-4">

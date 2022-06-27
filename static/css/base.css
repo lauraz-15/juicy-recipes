@@ -90,9 +90,9 @@
   .author {
       text-align: right;
       margin-right: 50px;
-      color: #fff;
       font-family: 'Nanum Gothic', sans-serif;
       color: #fffadc;
+      text-transform: capitalize;
   }
 
 /* ----- RECIPE CARDS ------ */
@@ -156,6 +156,13 @@ a {
     max-height: 360px;
     margin: 0 auto;
 }
+
+/* ----- ADD NEW RECIPE ------ */
+
+div[id^='cke_id_'] {
+    width: 100%
+}
+
 
 /* ----- FOOTER ------ */
 
@@ -267,11 +274,47 @@ textarea {
     }
 
     h1 {
-        font-size: 6rem;
+        font-size: 7rem;
         line-height: 0.8;
-        /* padding-top: 30px; */
+    
+    }
+
+    .hero-text {
+        padding-top: 50px;
     }
 
 
 }
+
+@media screen and (max-width: 360px) {
+
+    #main-nav {
+        /* height: 120px; */
+        /* padding-right: 25px; */
+    }
+
+    h1 {
+        font-size: 5rem;
+        line-height: 0.8;
+    }
+
+    .then {
+        font-size: 1rem;
+    }
+    .second-line {
+        font-size: 2rem;
+    }
+    .hero-text {
+        padding-top: 70px;
+    }
+
+    .author {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        font-size: small;
+    }
+
+
+}
+
 
