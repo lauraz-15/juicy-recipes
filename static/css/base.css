@@ -7,12 +7,11 @@
 
 #main-nav {
     border-bottom: 0.5px solid #fffadc;
-     background-color: #E4F5E7;
-    /* background: rgba(228, 245, 231, .5); */
+    background-color: #E4F5E7;
     margin: 0;
-    /* position: sticky; */
     width: 100%;
     z-index: 9;
+    height: 94px;
 }
 
 #main-middle {
@@ -21,7 +20,6 @@
 
 #main-middle > li {
     margin: 0 1%;
-    /* font-size: 12px; */
 }
 
 #login-bar {  
@@ -30,10 +28,8 @@
 
 .nav-item {
     font-family: 'Montserrat', sans-serif;
-    /* text-transform: uppercase; */
-    font-weight: 500;
+    font-weight: 400;
     white-space: nowrap;
-
 }
 
 .nav-item:hover {
@@ -52,8 +48,9 @@
 }
 
 .hero-image {
-    height: 50vh;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png) rgba(40, 40, 40, 0.5) no-repeat fixed; 
+    height: 500px;
+    /* url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png) rgba(40, 40, 40, 0.5) fixed; 
     /* background-size: cover;
     background-blend-mode: overlay; */
   }
@@ -103,6 +100,8 @@
 #card-container {
     width: 80%;
     margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 150px;
 }
 
 .card-body {
@@ -111,8 +110,8 @@
 
 .card-body:hover {
     border-bottom: 3px solid yellow;
-    border-right: 3px solid yellow;
-    background-color: #E4F5E7;
+    /* border-right: 3px solid yellow; */
+    background-color: #fffdf0;
 }
 
 h2 {
@@ -155,7 +154,7 @@ a {
 .card {
     max-width: 360px;
     max-height: 360px;
-    margin: 15px auto;
+    margin: 0 auto;
 }
 
 /* ----- FOOTER ------ */
@@ -232,6 +231,7 @@ h3 {
 #delete {
     background-color:#FF1616;
 }
+
 /* ----- COMMENTS SECTION ------ */
 
 
@@ -254,3 +254,24 @@ textarea {
     color: #fffadc;
     background-color: #439A86;
 }
+
+
+/* ----- MEDIA QUERIES ------ */
+
+
+@media screen and (max-width: 995px) {
+
+    #main-nav {
+        height: 120px;
+        padding-right: 25px;
+    }
+
+    h1 {
+        font-size: 6rem;
+        line-height: 0.8;
+        /* padding-top: 30px; */
+    }
+
+
+}
+
