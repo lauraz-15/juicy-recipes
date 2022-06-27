@@ -23,7 +23,7 @@ Link to the live project: [here](https://juicy-recipes.herokuapp.com/)
 ## Introduction
 
 Juicy Recipes is a platform for users to create and share recipes and interact with other users.
-Platform is built using Django Python-based framework, additionally Javascript is used to import and dispplay results from [Edamam API](https://www.edamam.comgclid=EAIaIQobChMIzLWV0qXL-AIVy-vtCh10Hw_ZEAAYASAAEgIS3vD_BwE) search results.
+Platform is built using Django Python-based framework, additionally Javascript is used to import and dissplay results from [Edamam API](https://www.edamam.comgclid=EAIaIQobChMIzLWV0qXL-AIVy-vtCh10Hw_ZEAAYASAAEgIS3vD_BwE) search results.
 
 
 ## Features

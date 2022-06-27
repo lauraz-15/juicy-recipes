@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 /* ----- NAV BAR ------ */
 
@@ -15,11 +16,12 @@
 }
 
 #main-middle {
-    margin-right: 90px;
+    margin: 0 auto;
 }
 
 #main-middle > li {
-    margin: 0 13px;
+    margin: 0 1%;
+    /* font-size: 12px; */
 }
 
 #login-bar {  
@@ -28,8 +30,10 @@
 
 .nav-item {
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-weight: SemiBold 600;
+    /* text-transform: uppercase; */
+    font-weight: 500;
+    white-space: nowrap;
+
 }
 
 .nav-item:hover {
