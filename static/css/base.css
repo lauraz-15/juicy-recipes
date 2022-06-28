@@ -14,6 +14,12 @@
     height: 94px;
 }
 
+.navbar-collapse {
+    background-color: #E4F5E7;
+    width: 100%;
+    padding: 0;
+}
+
 #main-middle {
     margin: 0 auto;
 }
@@ -272,8 +278,6 @@ textarea {
 
 
 .auth-container {
-    /* color: #F47A00;
-    background-color: #FF1616; */
     margin: 80px auto;
     width: 50%;
 }
@@ -327,6 +331,16 @@ textarea {
         margin-right: 20px;
         margin-bottom: 20px;
         font-size: small;
+    }
+
+    .navbar-brand img {
+        width: 200px;
+    }
+
+    .auth-container {
+        margin: 40px auto;
+        width: 90%;
+        text-align: center;
     }
 
 

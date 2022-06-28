@@ -36,7 +36,9 @@
         </div>
     </div>
 {% else %}
-<h2 class="auth-message">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">sign in</a>, so you can add new recipes!</h2>
+<div class="container">
+    <h2 class="auth-message">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">sign in</a>, so you can add new recipes!</h2>
+</div>
 {% endif %}
 
 {% block javascript %}

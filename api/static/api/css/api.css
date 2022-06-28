@@ -9,7 +9,7 @@
 
 #categories-navbar {
     /* background-color: #fffadc; */
-    background: rgba(255, 122, 89, .5);
+    background: rgb(246, 162, 142);
     z-index: 9;
     position: fixed;
     width: 100%;
