@@ -6,7 +6,7 @@ window.onload = function() {
 }
 
 
-function dipsplayCategoryResults(searchCategory, categorie) {
+function dipsplayCategoryResults(searchCategory, category) {
         searchCategory.hits.map(recipe=> {
         var recipeCard = document.createElement('div');
         recipeCard.classList.add('col-md-4')

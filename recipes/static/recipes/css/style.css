@@ -1,22 +1,48 @@
 
 /* ----- ADD RECIPE ------ */
 
+body > main > div > div > div > div > div > div:nth-child(7) {
+    width: fit-content !important;
+    width: 100% !important;
+    margin-right: 300px;
+    /* background-color: aqua; */
+}
+/* element, element *
+.django-ckeditor-widget, .django-ckeditor-widget * {
+    background-color: green;
+} */
 
-#new-recipe-container {
+form {
+    width: fit-content;
+    width: 100% !important;
+}
+/* .recipe-content {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: fit-content;
+    margin-right: 20px;
+} */
+
+/* iframe {
+    width: fit-content;
+} */
+
+/* #new-recipe-container {
     margin: 5% 12% 7%;
     width: fit-content;
     font-size: large;
     padding: 20px;
-}
+} */
 
-#edit-recipe-container {
-    margin: 5% 12% 7%;
-    width: fit-content;
+.edit-recipe-container {
+    margin: 5% 0;
+    /* width: fit-content; */
     font-size: large;
     padding: 20px;
 }
 
 .auth-message {
+    margin: 0 auto;
     text-align: center;
     margin-top: 50px;
 }

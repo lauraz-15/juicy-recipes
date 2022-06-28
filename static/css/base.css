@@ -101,7 +101,6 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 100px;
-    padding-bottom: 150px;
 }
 
 .card-body {
@@ -157,11 +156,20 @@ a {
     margin: 0 auto;
 }
 
+.pagination {
+    padding-bottom: 150px;
+    padding-top: 40px;
+}
+
+.pagination > li > a {
+    color:#439A86;
+}
+
 /* ----- ADD NEW RECIPE ------ */
 
-div[id^='cke_id_'] {
+/* div[id^='cke_id_'] {
     width: 100%
-}
+} */
 
 
 /* ----- FOOTER ------ */
@@ -262,6 +270,13 @@ textarea {
     background-color: #439A86;
 }
 
+
+.auth-container {
+    /* color: #F47A00;
+    background-color: #FF1616; */
+    margin: 80px auto;
+    width: 50%;
+}
 
 /* ----- MEDIA QUERIES ------ */
 

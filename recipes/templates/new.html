@@ -8,26 +8,28 @@
 
 
 {% block content %}
-<div class="container">
+
+<div>
     <h2 class="title-block">
         <span class="title-text">Add a new Recipe:</span>
     </h2>
     {% if user.is_authenticated %}
     <div>
-        <div class="row">
-        <div class="col-12">
-            <div class="row">
+        <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="row edit-recipe-container">
+                    <table class="recipe-content">
+                        {{ form.media}}
+                        {{ form.as_p}}
+                        <tr>
+                            <td>
+                            <button class="btn btn-success" type="submit">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <table>
-                    {{ form.media}}
-                    {{ form.as_p}}
-                    <tr>
-                        <td>
-                        <button class="btn btn-success" type="submit">Submit</button>
-                        </td>
-                    </tr>
-                </table>
+       
             </form>
             </div>
         </div>

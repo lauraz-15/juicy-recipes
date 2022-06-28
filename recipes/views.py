@@ -23,7 +23,7 @@ class DeleteRecipeView(DeleteView):
 class UpdateRecipeView(UpdateView):
     model = Recipe
     template_name = 'update_recipe.html'
-    fields = ('title', 'featured_image', 'ingridients', 'content', 'author')
+    fields = ('title', 'featured_image', 'ingridients', 'content')
     success_url = reverse_lazy('my_recipes')
 
     def form_valid(self, form):
