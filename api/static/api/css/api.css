@@ -7,8 +7,28 @@
 
 /* ----- CATEGORIES ------ */
 
+.categories-image {
+    height: 400px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1656457073/Healthy-Food-Doesnt-Have-To-Be-Expensive-1536x864_u943cx.jpg) rgba(40, 40, 40, 0.5) fixed; 
+}
+
+.search-image {
+    height: 400px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1656457073/Healthy-Food-Doesnt-Have-To-Be-Expensive-1536x864_u943cx.jpg) rgba(40, 40, 40, 0.5) fixed; 
+}
+
+.main-landing-text {
+    color: #fffadc;
+    font-size: 5rem;
+    font-family: 'Abril Fatface';
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    padding-top: 130px;
+}
+
 #categories-navbar {
-    /* background-color: #fffadc; */
     background: rgb(246, 162, 142);
     z-index: 9;
     position: fixed;
@@ -18,5 +38,21 @@
 #category-nav-items > li {
     margin: 0 13px;
     padding: 0;
+}
+
+.intro-text {
+    margin: 0 auto;
+    padding-top: 150px;
+    width: 70%;
+    color: #5b5959;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.brand-name {
+    border-bottom: 3px solid yellow;
 }
 

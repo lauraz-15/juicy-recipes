@@ -14,10 +14,12 @@
     height: 94px;
 }
 
-.navbar-collapse {
+.navbar-light .navbar-nav .nav-link {
+    color: #5b5959;
+}
+
+.mobile-menu {
     background-color: #E4F5E7;
-    width: 100%;
-    padding: 0;
 }
 
 #main-middle {
@@ -101,6 +103,14 @@
       text-transform: capitalize;
   }
 
+.contrast-div {
+    background: rgb(246, 162, 142);
+    height: 30px;
+}
+
+.background-contrast {
+    background-color: #fffef8fb;
+}
 /* ----- RECIPE CARDS ------ */
 
 #card-container {
@@ -183,13 +193,21 @@ a {
 
 footer {
     background-color: #E4F5E7;
-    min-height: 250px;
+    min-height: 240px;
 }
 
-footer > p {
-    color: #F47A00;
-    margin: 30px;
+
+.footer-brand {
+    margin: 80px;
 }
+
+.footer-brand div {
+    color: #F47A00;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
 
 
 /* ----- RECIPE DETAIL ------ */
@@ -253,6 +271,11 @@ h3 {
     background-color:#FF1616;
 }
 
+.delete-recipe {
+    margin: 50px auto;
+    width: 33%;
+    text-align: center;
+}
 /* ----- COMMENTS SECTION ------ */
 
 
@@ -343,6 +366,12 @@ textarea {
         text-align: center;
     }
 
+    .delete-recipe {
+        margin: 50px auto;
+        width: 100%;
+        text-align: center;
+        font-size: larger;
+    }
 
 }
 
