@@ -79,20 +79,20 @@ Platform is built using Django Python-based framework, additionally Javascript i
   - My favorites page consist of recipes that logged in user have liked/favorited, this lets the user to easily find the recipes they have liked
   - Users can unlike the recipe, which will remove the recipe from the "My Favorites" page
 
-![My Recipes](README_images/logo.png)
+![My Recipes](README_images/my_favorites.png)
 
 ### My Recipes
   - My Recipes page consist of recipes logged in user has created, this lets the user to overview the list of their recipes and easily and quickly access recipes detail page to make edits or delete the recipe
   - By vieiwng this page users can easily overview how many likes and comments each of their created recipe has.
 
-![My Recipes](README_images/logo.png)
+![My Recipes](README_images/my_recipes.png)
 
 ### Add Recipe
   - This page presents a form to a user, each field has a description at the top of it, so that users can easily understand what they need to do for each field.
   - Placeholder photo is added to the recipe if the user fails to add a recipe at the time, this encourages user to post the recipes in case the image is not available straight away. They can uplaod the actual photo later on when clicking on "Edit" option on recipe detail page.
   - When "Submit" button is clicked user is directed to "My Recipes" page and user feedback message appears at the top of the page indicating that recipe has been posted, which assures the user that recipe has been published and enables user to immidiately view it on the page where they are directed to.
 
-![Add Recipe](README_images/logo.png)
+![Add Recipe](README_images/add_recipe.png)
 
 ### Recipe Detail Page
   - Each user recipe page has it's own detail page, whcih lets the user to view each individual recipe details on a seperate page where full content is visible. Information is organsised in sections that lets the user to easily navigate to the information they want to find.
@@ -101,7 +101,13 @@ Platform is built using Django Python-based framework, additionally Javascript i
   - At the bottom of the recipe details page a comment section is available to users to view user converstaions.
   - If the user is logged in there is an option to leave a comments which lets the user to interact with other users
 
-![Add Recipe](README_images/logo.png)
+![Add Recipe](README_images/recipe_detail.png)
+
+### Comments
+  - Each recipe detail page displays comments section at the bottom. All site users can view all comments, but only the logged in users can leave a comment.
+  - Each comment needs approval, so that admin users have control of comment section and can filter out comments thta are not appropriate
+
+![Add Recipe](README_images/comments.png)
 
 ### Accounts
 
@@ -109,20 +115,20 @@ Platform is built using Django Python-based framework, additionally Javascript i
   - The register page is available to all users and the link is presented each time a unlogges user is trying to access content that is available only for registered users
   - Sign-up is easy withouth email verification which enables the user to quickly access full functionallity of the site
 
-![Register page](README_images/logo.png)
+![Register page](README_images/sign_up.png)
 
 #### Login Page
   - The login is userd for registered users to access the site
   - If incorrect login details will be entered user will be notified, which lets the user to understand why they have not been logged in.
   - If the log in details ahve been eneterd successfully, then user will be notified with a message appearing at the top of the page which will then time out after 3 seconds.
 
-![Logged-in](README_images/logo.png)
+![Logged-in](README_images/log_in.png)
 
 #### Log out Page
-  - When user will click on this item on the menu bar, another page will optn up asking the user if they want to log out, this lets the user to controld their action, in case if they have pressed the button by accident.
+  - When user will click on this item on the menu bar, another page will open up asking the user if they want to log out, this lets the user to controld their action, in case if they have pressed the button by accident.
   - If the user has logged out, a message will appear at the top of the page advising that, which ensures the user that thir account is safe.
 
-![Logged-out](README_images/logo.png)
+![Logged-out](README_images/promt_message.png)
 
 
 ### Features to add
