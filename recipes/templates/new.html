@@ -41,10 +41,7 @@
 
 {% block javascript %}
 {{ block.super }}
-<script>
-     let loggedInUser = "{{ user.id }}";
-     document.getElementById("logged").value = loggedInUser;
-</script>
+
 {% endblock %}
 
 {%endblock%}

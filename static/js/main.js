@@ -7,9 +7,3 @@
     alert.close();
 }, 2500);
 
-
-function texting() {
-    console.log("Main js file is connected from the main.js page!")
-}
-
-texting();
