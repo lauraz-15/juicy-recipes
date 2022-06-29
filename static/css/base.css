@@ -125,7 +125,6 @@
 
 .card-body:hover {
     border-bottom: 3px solid yellow;
-    /* border-right: 3px solid yellow; */
     background-color: #fffdf0;
 }
 
@@ -166,11 +165,11 @@ a {
     color: #F47A00;
 }
 
-.card {
+/* .card {
     max-width: 360px;
     max-height: 360px;
     margin: 0 auto;
-}
+} */
 
 .pagination {
     padding-bottom: 150px;
@@ -192,16 +191,21 @@ a {
 
 
 footer {
+
     background-color: #E4F5E7;
     min-height: 240px;
 }
 
-
-.footer-brand {
-    margin: 80px;
+#footer-links a {
+    color: #F47A00 !important;
 }
 
+/* footer > .container div {
+    margin: 10px;
+} */
+
 .footer-brand div {
+    margin-top: 3%;
     color: #F47A00;
     font-family: 'Montserrat', sans-serif;
 
@@ -328,7 +332,31 @@ textarea {
 
 }
 
-@media screen and (max-width: 360px) {
+
+@media screen and (max-width: 770px) {
+
+    h1 {
+        font-size: 6rem;
+    }
+    footer {
+        min-height: 290px;
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+
+    h1 {
+        font-size: 6rem;
+    }
+    .third {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
 
     #main-nav {
         /* height: 120px; */
@@ -345,6 +373,11 @@ textarea {
     }
     .second-line {
         font-size: 2rem;
+    }
+
+    .third {
+        font-size: 3rem;
+        letter-spacing: 4px;
     }
     .hero-text {
         padding-top: 70px;
