@@ -4,6 +4,9 @@
 
 Link to the live project: [here](https://juicy-recipes.herokuapp.com/)
 
+![Mockup](README_images/mockup.png)
+
+The API 
 
 ## Table of Contents 
 
