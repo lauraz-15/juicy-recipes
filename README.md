@@ -39,39 +39,41 @@ Platform is built using Django Python-based framework, additionally Javascript i
   - The nav items are interactive which means that once the user hovers over the items, yellow underline appears to indicate that the item is clickable
   - The navigation menu is responsive, which means it will change to hamburger menu when viewed on smaller screens
 
-![Navigation Menu](README_images/logo.png)
+![Navigation Menu](README_images/nav-bar.png)
 
 
 #### Hero Image
   - Hero image is presented on home landing page, which is intended to inform the user what kind of website this is and what it is about.
 
-![Hero image](README_images/logo.png)
+![Hero image](README_images/hero-image.png)
 
+### Recipes
+  - Home page lists all user recipes that have been posted on Juicy Recipes site by all users, it is easy to browse through the paginated pages without getting lost on the page
+  - User can see the likes and comments for each recipe on the all recipes view, this helps the user which recipe is most liked by other users 
+
+![Recipes](README_images/recipe_list.png)
 
 #### Footer
   - Footer is visible at the bottom of all pages, it matched the color and design feel of the rest of the site
   - It includes additional information about thw site and useful socal links that when clicked will be opened in a new browser
 
-![footer](README_images/logo.png)
+![footer](README_images/footer.png)
 
 ### Inspiration Page
   - Page consists of a list of reciipes organised in 8 different categories from Edamam API request, this lets the user to get some inspiration and see what recipes are available elsewhere. Content is orgnised in a easy to read format, familiar to the user recipes that are available on the other pages.
   - When user clicks on on of the recipes, new page opens where recipe is publihsed, user can read more about it and make their own version of it and then post the recipe on Juicy recipes site whilst referncing the source page.
 
-![Inspiration](README_images/logo.png)
+![Inspiration](README_images/categories_menu.png)
+
+![Inspiration](README_images/inspiration_list.png)
 
 ### Search Page
   - Search page has an input field presented as a main item on the page, this helps the user to easily understand that they can search for any recipes
   - Results are presented in a familiar design cards, with the source infomation rigth at the bottom, which helps the user to choose which recipes to pick. 
   - The Search option on Juicy Recipes site lets the user to see the photo of the recipe result straight away, which helpS the user to quickly find what they like without browsing through many sites and spending time.
 
-![Search](README_images/logo.png)
+![Search](README_images/categories_menu.png)
 
-### Recipes
-  - The recipes page lists all user recipes that have been posted on Juicy Recipes site by all users, it is easy to browse through the paginated pages without getting lost on the page
-  - User can see the likes and comments for each recipe on the all recipes view, this helps the user which recipe is most liked by other users 
-
-![Recipes](README_images/logo.png)
 
 ### My favorites
   - My favorites page consist of recipes that logged in user have liked/favorited, this lets the user to easily find the recipes they have liked
