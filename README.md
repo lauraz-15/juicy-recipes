@@ -138,6 +138,8 @@ Platform is built using Django Python-based framework, additionally Javascript i
 
 ## Database Design
 
+![Database Design](README_images/Data Model Design.jpg)
+
 [Back to top ⇧](#juicy-recipes)
 
 ## Technologies
