@@ -18,10 +18,20 @@ body > main > div > div > div > div > div > div:nth-child(7) {
 } */
 /* .recipe-content {
     margin-top: 150px;
+    width: fit-content;
+} */
+
+.edit-recipe-container {
+    margin-top: 100px;
     margin-bottom: 150px;
     width: fit-content;
-    margin-right: 20px;
-} */
+}
+
+.auth-message {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
 
 /* iframe {
     width: fit-content;
@@ -41,8 +51,3 @@ body > main > div > div > div > div > div > div:nth-child(7) {
     padding: 20px;
 } */ 
 
-.auth-message {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 50px;
-}
