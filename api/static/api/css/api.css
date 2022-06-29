@@ -31,7 +31,7 @@
 #categories-navbar {
     background: rgb(246, 162, 142);
     z-index: 9;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
 }
 
