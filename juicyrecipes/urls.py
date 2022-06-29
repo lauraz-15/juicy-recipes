@@ -26,4 +26,4 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('recipes/', include('recipes.urls'), name='recipes_urls'),
     path('api/', include('api.urls'), name='api_urls'),
-]
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

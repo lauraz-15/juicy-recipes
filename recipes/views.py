@@ -37,8 +37,6 @@ def new_recipe(request):
     if request.method == 'POST':
         recipeForm = RecipeForm(request.POST, request.FILES)
         if recipeForm.is_valid():
-            recipeForm = recipeForm.save(commit=False)
-            recipeForm.instance.author = request.user
             recipeForm.save()
             messages.success(request, 'Recipe has been posted')
     return render(request, 'new.html', {'form': form})
