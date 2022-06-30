@@ -14,7 +14,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Recipe(models.Model):
     """Model for Recipe"""
     title = models.CharField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipe_list")
+    author = models.ForeignKey(User,
+    on_delete =models.CASCADE, related_name="recipe_list")
     featured_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
     ingridients = models.TextField(blank=True, null=True)
@@ -40,7 +41,7 @@ class Recipe(models.Model):
 class Comment(models.Model):
     """Model for comments"""
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
-                             related_name="comments")
+    related_name = "comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

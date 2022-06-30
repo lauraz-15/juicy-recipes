@@ -44,8 +44,6 @@
     border-bottom: 3px solid yellow;
 }
 
-
-
 /* ----- HERO LANDING PAGE ------ */
 
 #message-box {
@@ -57,10 +55,7 @@
 
 .hero-image {
     height: 500px;
-    /* url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png */
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url(https://res.cloudinary.com/dofxnvsmw/image/upload/v1653851497/hero_pucrqd.png) rgba(40, 40, 40, 0.5) fixed; 
-    /* background-size: cover;
-    background-blend-mode: overlay; */
   }
 
   h1 {
@@ -165,27 +160,16 @@ a {
     color: #F47A00;
 }
 
-/* .card {
-    max-width: 360px;
-    max-height: 360px;
-    margin: 0 auto;
-} */
-
 .pagination {
     padding-bottom: 150px;
     padding-top: 40px;
 }
 
+/* ----- PAGINATION ------ */
+
 .pagination > li > a {
     color:#439A86;
 }
-
-/* ----- ADD NEW RECIPE ------ */
-
-/* div[id^='cke_id_'] {
-    width: 100%
-} */
-
 
 /* ----- FOOTER ------ */
 
@@ -200,19 +184,12 @@ footer {
     color: #F47A00 !important;
 }
 
-/* footer > .container div {
-    margin: 10px;
-} */
-
 .footer-brand div {
     margin-top: 3%;
     color: #F47A00;
     font-family: 'Montserrat', sans-serif;
 
 }
-
-
-
 
 /* ----- RECIPE DETAIL ------ */
 
@@ -280,8 +257,8 @@ h3 {
     width: 33%;
     text-align: center;
 }
-/* ----- COMMENTS SECTION ------ */
 
+/* ----- COMMENTS SECTION ------ */
 
 #comments-section {
     display: inline-block;
@@ -328,8 +305,6 @@ textarea {
     .hero-text {
         padding-top: 50px;
     }
-
-
 }
 
 
@@ -357,11 +332,6 @@ textarea {
 }
 
 @media screen and (max-width: 380px) {
-
-    #main-nav {
-        /* height: 120px; */
-        /* padding-right: 25px; */
-    }
 
     h1 {
         font-size: 5rem;

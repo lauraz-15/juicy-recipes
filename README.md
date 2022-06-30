@@ -139,14 +139,6 @@ Platform is built using Django Python-based framework, additionally Javascript i
 [Back to top ⇧](#juicy-recipes)
 
 
-## Wireframes
-
-[Back to top ⇧](#juicy-recipes)
-
-## Design
-
-[Back to top ⇧](#juicy-recipes)
-
 ## Database Design
 
 ![Database Design](README_images/data_design.jpg)
@@ -192,9 +184,22 @@ Platform is built using Django Python-based framework, additionally Javascript i
 
 ## Testing
 
-[Back to top ⇧](#juicy-recipes)
+#### HTML
+No errors were found passing through HTML validator
+#### CSS
+
+#### Javascript
+No errors were found when passing through the official (Jigsaw) validator
+
+#### Python
+No errors were found when passing through the official (Jigsaw) validator
+Very few minor indentation errors found
 
 ## Issues and bugs
+
+During deployment I have realised that RichTextField intup field for ingridients and directions section didn't show up on the live site, unless the DEBUG option was set to "True" 
+
+After troubleshooting this for a while, I have decided to replace this with TextField area section instead to pass the CRUD functionallity requirements. 
 
 [Back to top ⇧](#juicy-recipes)
 
@@ -203,5 +208,7 @@ Platform is built using Django Python-based framework, additionally Javascript i
 [Back to top ⇧](#juicy-recipes)
 
 ## Credits
+
+'I think therefore I blog' project was the insoiration for this project and some of the data modules as well as page pagination.
 
 [Back to top ⇧](#juicy-recipes)
