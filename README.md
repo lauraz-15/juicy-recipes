@@ -206,6 +206,9 @@ During deployment I have realised that RichTextField intup field for ingridients
 
 After troubleshooting this for a while, I have decided to replace this with TextField area section instead to pass the CRUD functionallity requirements. 
 
+There is an error in the console: Uncaught SyntaxError: Identifier 'loggedInUser' has already been declared (at (index):170:9)
+Unfortunately this code can't be taken out as it gets the user id from the front end.If I would have more time would work to fix this another way, but fow now it doesn;t affect the functionality.
+
 [Back to top ⇧](#juicy-recipes)
 
 ## Deployment
