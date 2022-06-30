@@ -184,6 +184,11 @@ Platform is built using Django Python-based framework, additionally Javascript i
 
 ## Testing
 
+Extensive testing was dome throughout making the project and right at the end.
+A few buges were found during testing:
+
+- Search field doesn't refresh itself if the user want to search for another item, user would have to refresh the browser to start a new search
+
 #### HTML
 No errors were found passing through HTML validator
 #### CSS
