@@ -1,4 +1,3 @@
-
 // -----------------------SEARCH AREA API--------------------------------
 
 
@@ -46,7 +45,7 @@ async function sendAPIcall() {
 
 // Wait for the user to click the button
 // send API call
-function searchBtnClicked() {
+function searchBtnClicked(searchData) {
     let searchBtn = document.getElementById('search-btn');
     searchBtn.addEventListener("click", ()=> {
         sendAPIcall();

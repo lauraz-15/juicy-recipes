@@ -1,5 +1,4 @@
 
-
 // -----------------------CATEGORIES / INSPIRATION API--------------------------------
 
 window.onload = function() {
@@ -41,7 +40,7 @@ function dipsplayCategoryResults(searchCategory, categorie) {
 
 async function getMultipleAPIcalls(recipeCard) {
     const categories = ["healthy", "vegetarian", "pastries", "light", "grilled", "meat", "fish", "kids"];
-    const responses = await Promise.all(
+    await Promise.all(
 	categories.map(async category => {
         let APP_ID = "2f1133a1";
         let API_KEY = "63872c307c1ea5bea9706e007963df6f";
@@ -52,5 +51,5 @@ async function getMultipleAPIcalls(recipeCard) {
         let searchCategory = await response.json();
         dipsplayCategoryResults(searchCategory, category);
 	})
-)
+);
 }
