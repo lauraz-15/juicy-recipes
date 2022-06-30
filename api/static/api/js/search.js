@@ -1,38 +1,25 @@
 
 // -----------------------SEARCH AREA API--------------------------------
 
-function searchBtnClicked() {
-    let searchBtn = document.getElementById('search-btn')
-    searchBtn.addEventListener("click", ()=> {
-        sendAPIcall();
-        dipsplayResults(searchData)
-        })
-}
 
-searchBtnClicked()
-
+// Send API call based on user's input value
 async function sendAPIcall() {
 
-        let searchvalue = document.getElementById('text-value').value
+        let searchvalue = document.getElementById('text-value').value;
 
-        let APP_ID = "2f1133a1"
-        let API_KEY = "63872c307c1ea5bea9706e007963df6f"
+        let APP_ID = "2f1133a1";
+        let API_KEY = "63872c307c1ea5bea9706e007963df6f";
         let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${searchvalue}`);
-        console.log(response)
-        let searchData = await response.json()
-        console.log(searchData);
-        console.log(`${searchData.hits[0].recipe.label}`)
-        dipsplayResults(searchData)
-        console.log(`Search value is: ${searchvalue}`)
-        console.log(searchData.hits)
+        let searchData = await response.json();
+        dipsplayResults(searchData);
     }
 
     function dipsplayResults(searchData) {
         searchData.hits.map(recipe=> {
         var recipeCard = document.createElement('div');
-        recipeCard.classList.add('col-md-4')
-        recipeCard.classList.add('col-md-6')
-        recipeCard.classList.add('col-lg-4')
+        recipeCard.classList.add('col-md-4');
+        recipeCard.classList.add('col-md-6');
+        recipeCard.classList.add('col-lg-4');
         recipeCard.innerHTML = 
               `  <a href="${recipe.recipe.url}" target="_blank">
                     <div class="card mb-4">
@@ -52,10 +39,20 @@ async function sendAPIcall() {
                     </div>
                 </div>
                 </a>
-    `
+    `;
   document.getElementsByClassName('search-results')[0].appendChild(recipeCard);
-})
+});
  }
 
+// Wait for the user to click the button
+// send API call
+function searchBtnClicked() {
+    let searchBtn = document.getElementById('search-btn');
+    searchBtn.addEventListener("click", ()=> {
+        sendAPIcall();
+        dipsplayResults(searchData);
+        });
+}
 
+searchBtnClicked();
 

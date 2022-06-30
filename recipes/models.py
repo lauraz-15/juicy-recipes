@@ -17,8 +17,8 @@ class Recipe(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipe_list")
     featured_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
-    ingridients = RichTextField(blank=True, null=True)
-    content = RichTextField(blank=True, null=True)
+    ingridients = models.TextField(blank=True, null=True)
+    content = models.TextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(
