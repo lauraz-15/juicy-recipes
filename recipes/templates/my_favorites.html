@@ -23,25 +23,22 @@
                             </div>
                             <a href="{% url 'recipe_detail' recipe.pk  %}">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
-                                <!-- <p class="excerpt-text">{{ recipe.excerpt }}</p> -->
                             </a>
-                            <hr />
-                            <small> 
-                                <p class="card-bottom">Created by: <span class="created-by">{{ recipe.author }}</span>    
+                            <hr/>
+                                <p class="card-bottom"> 
+                                <small> Created by: <span class="created-by">{{ recipe.author }}</span>    
                                 <i class="far fa-heart"></i>
                                 <span class="number-l">{{ recipe.number_of_likes }}</span>
+                                </small>
                                 </p>
-                            </small>
+                            </div>
                         </div>
-                    </div>
-                </div>
-              
+                     </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -53,7 +50,6 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
             {% endif %}
         </ul>
     </nav>
