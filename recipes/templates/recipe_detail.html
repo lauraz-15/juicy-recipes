@@ -25,8 +25,7 @@
                             {{ total_comments }}
                         </strong>
                         {% endwith %}
-                    </span>
-                  
+                    </span> 
                     <!-- Likes button -->
                     <strong>
                         {% if user.is_authenticated %}
@@ -42,17 +41,15 @@
                         {% else %}
                         <span><i class="far fa-heart"></i></span>
                         {% endif %}
-                        <span id="number-l">{{ recipe.number_of_likes }}</span>
+                        <span class="number-l">{{ recipe.number_of_likes }}</span>
                     </strong>
                 </div>
                 <div>
-              
                 </div>
             </div>
                 <h3>Ingridents:</h3>
                 <p class="card-text">{{ recipe.ingridients | safe }}</p>
             </div>
-           
         </div>
         <div class="container">
             <div class="row">
@@ -74,12 +71,8 @@
                 </div>
             </div>
         </div>
-        
     </div>
 </div>
-
-
-
 <br>
 <div class="container">
 

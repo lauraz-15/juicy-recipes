@@ -26,15 +26,15 @@ async function sendAPIcall() {
                         <div class="card-body">
                             <div class="image-container">
                                 <img class="card-image"
-                                src="${recipe.recipe.image}">
+                                src="${recipe.recipe.image}" alt="Image of a Recipe">
                             </div>
                             <h2 class="card-title">${recipe.recipe.label}</h2>
-                            <hr />
-                            <small>
-                            <p class="card-bottom">Source: 
-                            <span class="created-by">${recipe.recipe.source}</span> 
+                            <hr />        
+                            <p class="card-bottom">
+                            <small>Source: 
+                            <span class="created-by">${recipe.recipe.source}
+                            </small></span> 
                             </p>
-                            </small>
                         </div>
                     </div>
                 </div>

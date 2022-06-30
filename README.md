@@ -185,13 +185,17 @@ Platform is built using Django Python-based framework, additionally Javascript i
 ## Testing
 
 Extensive testing was dome throughout making the project and right at the end.
-A few buges were found during testing:
+A few bugs and were found during testing(marked in red), also some user experience imrpovements that coudl be done (marked in yellow)
 
-- Search field doesn't refresh itself if the user want to search for another item, user would have to refresh the browser to start a new search
+![Testing_part1](README_images/Testing.png)
+![Testing_part1](README_images/Testing_part2.png)
+
 
 #### HTML
 No errors were found passing through HTML validator
+
 #### CSS
+No major erros were found during CCS validation on [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjuicy-recipes.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 #### Javascript
 No errors were found when passing through the official (Jigsaw) validator
@@ -208,6 +212,9 @@ After troubleshooting this for a while, I have decided to replace this with Text
 
 There is an error in the console: Uncaught SyntaxError: Identifier 'loggedInUser' has already been declared (at (index):170:9)
 Unfortunately this code can't be taken out as it gets the user id from the front end.If I would have more time would work to fix this another way, but fow now it doesn;t affect the functionality.
+
+And finally another bug that should have been mentioned on the testing spreadhseet:
+- Search field doesn't refresh itself if the user want to search for another item, user would have to refresh the browser to start a new search
 
 [Back to top ⇧](#juicy-recipes)
 

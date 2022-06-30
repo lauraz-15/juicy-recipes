@@ -19,16 +19,16 @@ function dipsplayCategoryResults(searchCategory, categorie) {
                         <div class="card-body">
                             <div class="image-container">
                                 <img class="card-image"
-                                src="${recipe.recipe.image}">
+                                src="${recipe.recipe.image}" alt="recipe image">
                             </div>
                             <h2 class="card-title">${recipe.recipe.label}</h2>
                             <hr />
-                            <small>
-                                <p class="card-bottom">Source: 
-                                <span class="created-by">${recipe.recipe.source}</span> 
+                            <p class="card-bottom">
+                                <small>Source: 
+                                <span class="created-by">${recipe.recipe.source}</span>
+                                </small>
                                 </p>
-                            </small>
-                        </div>
+                           </div>
                     </div>
                 </div>
                 </a>
