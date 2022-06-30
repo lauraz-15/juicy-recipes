@@ -6,7 +6,7 @@ Link to the live project: [here](https://juicy-recipes.herokuapp.com/)
 
 ![Mockup](README_images/mockup.png)
 
-The API 
+Important note: The API call has a limitation of 10 requestes per minute, as this is free version of the Edammam API this could sometimes cause recipes not loading straight away on Inspiration or Seacrh pages. 
 
 ## Table of Contents 
 
@@ -219,6 +219,30 @@ And finally another bug that should have been mentioned on the testing spreadhse
 [Back to top ⇧](#juicy-recipes)
 
 ## Deployment
+
+#### Github
+
+I used [Code Institute template](https://github.com/Code-Institute-Org/python-essentials-template) to start the raspitory.
+- click on the link
+- click un 'use this template'
+- add name
+- open on gitpod
+
+To set up the database and set up django environment i have followed the steps on [Code institutes Django Blog cheatsheet](https://docs.google.com/document/d/1K58_GblYqsrmMBll_x5PwqdFCebo8k1z_sf_i2BECdI/edit).
+
+### Forking and cloning Juicy Recipes project
+
+#### Forking
+- log in and locate Juicy Recipes rapitory
+- click on Fork button 
+
+#### Cloning
+- log in and locate Juicy Recipes rapitory
+- rigth at the top of the code files click the green ‘code’ button
+- select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
+- open git bash
+- type ‘git clone’ and then paste the URL you copied. Press Enter.
+
 
 [Back to top ⇧](#juicy-recipes)
 
