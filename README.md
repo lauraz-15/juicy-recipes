@@ -2,7 +2,7 @@
 
 # Juicy Recipes
 
-Link to the live project: [here](https://juicy-recipes.herokuapp.com/)
+Link to the live project: [here](https://juicy-recipes-z6hf.onrender.com)
 
 ![Mockup](README_images/mockup.png)
 
